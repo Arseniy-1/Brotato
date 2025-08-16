@@ -15,5 +15,9 @@ public class Greeter
     public Greeter(string message)
     {
         Debug.Log(message);
+        var context = new Contexts();
+
+        var enemy = context.game.CreateEntity(); 
+
     }
 }
