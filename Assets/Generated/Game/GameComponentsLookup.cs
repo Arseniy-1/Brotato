@@ -8,15 +8,21 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
+    public const int Follow = 0;
+    public const int InputEvent = 1;
+    public const int Movable = 2;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 3;
 
     public static readonly string[] componentNames = {
-
+        "Follow",
+        "InputEvent",
+        "Movable"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(Project.Scripts.EntityComponents.FollowComponent),
+        typeof(Project.Scripts.EntityComponents.InputEventComponent),
+        typeof(Project.Scripts.EntityComponents.MovableComponent)
     };
 }
