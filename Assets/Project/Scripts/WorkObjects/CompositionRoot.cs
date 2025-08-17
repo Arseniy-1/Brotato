@@ -29,7 +29,7 @@ namespace Project.Scripts.WorkObjects
             
             GameObject player = Instantiate(_playerData.Prefab, Vector3.zero, Quaternion.identity);
             Transform playerTransform = player.transform;
-            EnemySpawnPointProvider spawnPointProvider = new (_spawnPointsConfig, playerTransform);
+            EnemySpawnPointProvider spawnPointProvider = new EnemySpawnPointProvider(_spawnPointsConfig, playerTransform);
 
             _updateSystems = new Systems()
                 .Add(new GameInitializationSystem(_contexts.game, _playerData, player))
