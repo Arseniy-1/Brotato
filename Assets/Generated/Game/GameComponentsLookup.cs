@@ -8,21 +8,18 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int Follow = 0;
-    public const int InputEvent = 1;
-    public const int Movable = 2;
+    public const int CodeGameplayCommonWorldPosition = 0;
+    public const int CodeGameplayFeaturesMovementSpeed = 1;
 
-    public const int TotalComponents = 3;
+    public const int TotalComponents = 2;
 
     public static readonly string[] componentNames = {
-        "Follow",
-        "InputEvent",
-        "Movable"
+        "CodeGameplayCommonWorldPosition",
+        "CodeGameplayFeaturesMovementSpeed"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(Project.Scripts.EntityComponents.FollowComponent),
-        typeof(Project.Scripts.EntityComponents.InputEventComponent),
-        typeof(Project.Scripts.EntityComponents.MovableComponent)
+        typeof(Code.Gameplay.Common.WorldPosition),
+        typeof(Code.Gameplay.Features.Movement.Speed)
     };
 }
