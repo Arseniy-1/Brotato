@@ -14,19 +14,19 @@ namespace Code.Gameplay.Features.Movement.Systems
             _time = time;
             _movers = game.GetGroup(GameMatcher
                 .AllOf(
-                    GameMatcher.Direction, 
-                    GameMatcher.WorldPosition, 
-                    GameMatcher.Speed, 
-                    GameMatcher.MovementAvailable, 
+                    GameMatcher.Direction,
+                    GameMatcher.WorldPosition,
+                    GameMatcher.Speed,
                     GameMatcher.Moving));
         }
 
         public void Execute()
         {
-            foreach (GameEntity entity in _movers)
+            foreach (GameEntity mover in _movers)
             {
-                entity.
-                entity.ReplaceWorldPosition((Vector2)entity.worldPosition + entity.Direction * entity.Speed * _time.DeltaTime);
+                mover.ReplaceWorldPosition((Vector2)mover.WorldPosition +
+                                            mover.Direction * mover.Speed * _time.DeltaTime);
             }
         }
+    }
 }

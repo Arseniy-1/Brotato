@@ -1,4 +1,8 @@
-﻿using Code.Gameplay.Common.Time;
+﻿
+using Code.Gameplay;
+using Code.Gameplay.Cameras.Provider;
+using Code.Gameplay.Common.Time;
+using Code.Gameplay.Input.Service;
 using UnityEngine;
 using Zenject;
 
@@ -10,16 +14,29 @@ namespace Code.Infrastructure
         private ITimeService _timeService;
         
         private BattleFeature _battleFeature;
+        private IInputService _inputService;
+        private ICameraProvider _cameraProvider;
 
-        private void Construct(GameContext gameContext, ITimeService timeService)
+        // [Inject]
+        // private void Construct(GameContext gameContext, ITimeService timeService, IInputService inputService)
+        // {
+        //     _gameContext = gameContext;
+        //     _timeService = timeService;
+        //     _inputService = inputService;
+        // }
+
+        private void Awake()
         {
-            _gameContext = gameContext;
-            _timeService = timeService;
+            _gameContext = Contexts.sharedInstance.game;
+            _timeService = new UnityTimeService();
+            _inputService = new StandaloneInputService();
+            _cameraProvider = new CameraProvider();
         }
 
         private void Start()
         {
-            _battleFeature = new BattleFeature(_gameContext, _timeService);
+            _battleFeature = new BattleFeature(_gameContext, _timeService, _inputService, _cameraProvider);
+            _battleFeature.Initialize();
         }
 
         private void Update()

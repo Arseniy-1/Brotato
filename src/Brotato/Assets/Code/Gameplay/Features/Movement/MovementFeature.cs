@@ -8,6 +8,8 @@ namespace Code.Gameplay.Features.Movement
         public MovementFeature(GameContext gameContext, ITimeService timeService)
         {
             Add(new DirectionalDeltaMoveSystem(gameContext, timeService));
+            Add(new TurnAlongDirectionSystem(gameContext));
+            Add(new UpdateTransformPositionSystem(gameContext));
         }
     }
 }
