@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Code\Gameplay\Features\Hero\HeroComponents.cs" />
      <Compile Include="Assets\Code\Generated\Meta\MetaAttribute.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enemies\EnemyComponents.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputEntity.cs" />
      <Compile Include="Assets\Code\Common\Extensions\VectorExtensions.cs" />
      <Compile Include="Assets\Code\Generated\Game\GameEntity.cs" />
@@ -65,6 +66,7 @@
      <Compile Include="Assets\Code\Generated\Contexts.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameAxisInputComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\BattleFeature.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameEnemyComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameTransformComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameHeroComponent.cs" />
      <Compile Include="Assets\Code\Generated\Feature.cs" />
@@ -74,10 +76,13 @@
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Behaviours\HeroAnimator.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameHeroAnimatorComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Cameras\Provider\CameraProvider.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Hero\Systems\AnimateHeroMoveSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\MoveByDirectionSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\DirectionalDeltaMoveSystem.cs" />
      <Compile Include="Assets\Code\Generated\Meta\MetaMatcher.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enemies\Systems\SetEnemyDirectionByHeroSystem.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputContext.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enemies\Registrar\EnemyRegistrar.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputComponentsLookup.cs" />
      <Compile Include="Assets\Code\Common\Extensions\CollisionExtensions.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameDirectionComponent.cs" />
@@ -113,6 +118,7 @@
      <Folder Include="Assets\Entitas\Sherlog" />
      <Folder Include="Assets\Entitas\Entitas" />
      <Folder Include="Assets\Code\Gameplay\Features\Hero\Behaviours" />
+     <Folder Include="Assets\Code\Gameplay\Features\Enemies\Registrar" />
      <Folder Include="Assets\TCPeasy" />
      <Folder Include="Assets\Code\Generated\Meta" />
      <Folder Include="Assets\Entitas" />
@@ -145,6 +151,8 @@
      <Folder Include="Assets\Code\Gameplay\Features\Hero\Registrars" />
      <Folder Include="Assets\Entitas\DesperateDevs" />
      <Folder Include="Assets\Project\Scenes" />
+     <Folder Include="Assets\Code\Gameplay\Features\Enemies\Systems" />
+     <Folder Include="Assets\Code\Gameplay\Features\Enemies" />
      <Folder Include="Assets\Code" />
      <Folder Include="Assets\Entitas\Jenny" />
      <Folder Include="Assets\Entitas\TCPeasy" />

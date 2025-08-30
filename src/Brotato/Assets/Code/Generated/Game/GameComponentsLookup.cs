@@ -11,21 +11,23 @@ public static class GameComponentsLookup {
     public const int SpriteRenderer = 0;
     public const int Transform = 1;
     public const int WorldPosition = 2;
-    public const int Hero = 3;
-    public const int HeroAnimator = 4;
-    public const int Direction = 5;
-    public const int Moving = 6;
-    public const int Speed = 7;
-    public const int TurnedAlongDirection = 8;
-    public const int AxisInput = 9;
-    public const int Input = 10;
+    public const int Enemy = 3;
+    public const int Hero = 4;
+    public const int HeroAnimator = 5;
+    public const int Direction = 6;
+    public const int Moving = 7;
+    public const int Speed = 8;
+    public const int TurnedAlongDirection = 9;
+    public const int AxisInput = 10;
+    public const int Input = 11;
 
-    public const int TotalComponents = 11;
+    public const int TotalComponents = 12;
 
     public static readonly string[] componentNames = {
         "SpriteRenderer",
         "Transform",
         "WorldPosition",
+        "Enemy",
         "Hero",
         "HeroAnimator",
         "Direction",
@@ -40,6 +42,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Common.SpriteRendererComponent),
         typeof(Code.Gameplay.Common.TransformComponent),
         typeof(Code.Gameplay.Common.WorldPosition),
+        typeof(Code.Gameplay.Features.Enemies.Enemy),
         typeof(Code.Gameplay.Features.Hero.Hero),
         typeof(Code.Gameplay.Features.Hero.HeroAnimatorComponent),
         typeof(Code.Gameplay.Features.Movement.Direction),

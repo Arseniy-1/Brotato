@@ -1,4 +1,5 @@
 ﻿using Code.Gameplay.Common.Time;
+using Code.Gameplay.Features.Hero.Systems;
 using Code.Gameplay.Features.Movement.Systems;
 
 namespace Code.Gameplay.Features.Movement
@@ -10,6 +11,7 @@ namespace Code.Gameplay.Features.Movement
             Add(new DirectionalDeltaMoveSystem(gameContext, timeService));
             Add(new TurnAlongDirectionSystem(gameContext));
             Add(new UpdateTransformPositionSystem(gameContext));
+            Add(new SetHeroDirectionByInputSystem(gameContext));
         }
     }
 }

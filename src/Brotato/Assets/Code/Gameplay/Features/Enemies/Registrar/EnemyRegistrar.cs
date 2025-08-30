@@ -1,16 +1,14 @@
-﻿using Code.Common.Entity;
+using Code.Common.Entity;
 using Code.Common.Extensions;
-using Code.Gameplay.Features.Hero.Behaviours;
 using UnityEngine;
 
-namespace Code.Gameplay.Features.Hero.Registrars
+namespace Code.Gameplay.Features.Enemies.Registrar
 {
-    public class HeroRegistrar : MonoBehaviour
+    public class EnemyRegistrar : MonoBehaviour
     {
         private GameEntity _entity;
 
-        public HeroAnimator HeroAnimator;
-        public float Speed = 2;
+        public float Speed = 1;
 
         private void Awake()
         {
@@ -20,9 +18,7 @@ namespace Code.Gameplay.Features.Hero.Registrars
                 .AddTransform(transform)
                 .AddDirection(transform.forward)
                 .AddSpeed(Speed)
-                .AddSpriteRenderer(HeroAnimator.SpriteRenderer)
-                .AddHeroAnimator(HeroAnimator)
-                .With(x => x.isHero = true)
+                .With(x => x.isEnemy = true)
                 .With(x => x.isTurnedAlongDirection = true);
         }
     }

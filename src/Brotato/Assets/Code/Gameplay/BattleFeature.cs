@@ -14,6 +14,7 @@ namespace Code.Gameplay
             Add(new InputFeature(gameContext, inputService));
             Add(new HeroFeature(gameContext, cameraProvider));
             Add(new MovementFeature(gameContext, timeService));
+            Add(new MovementFeature(gameContext, timeService));
         }
     }
 }
