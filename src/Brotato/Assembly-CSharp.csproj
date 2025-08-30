@@ -63,10 +63,10 @@
      <Compile Include="Assets\Code\Common\Extensions\TransformExtensions.cs" />
      <Compile Include="Assets\Code\Gameplay\Cameras\Provider\ICameraProvider.cs" />
      <Compile Include="Assets\Code\Gameplay\Input\Systems\EmitInputSystem.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameEnemyComponent.cs" />
      <Compile Include="Assets\Code\Generated\Contexts.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameAxisInputComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\BattleFeature.cs" />
-     <Compile Include="Assets\Code\Generated\Game\Components\GameEnemyComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameTransformComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameHeroComponent.cs" />
      <Compile Include="Assets\Code\Generated\Feature.cs" />
