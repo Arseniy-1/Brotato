@@ -6,10 +6,12 @@ namespace Code.Gameplay.Features.Enemies.Systems
     public class SetEnemyDirectionByHeroSystem : IExecuteSystem
     {
         private readonly IGroup<GameEntity> _enemies;
+        private readonly IGroup<GameEntity> _heroes;
 
         public SetEnemyDirectionByHeroSystem(GameContext gameContext)
         {
             _enemies = gameContext.GetGroup(GameMatcher.Enemy);
+            _heroes = gameContext.GetGroup(GameMatcher.Hero);
         }
 
         public void Execute()
@@ -18,7 +20,7 @@ namespace Code.Gameplay.Features.Enemies.Systems
             {
                 enemy.isMoving = true;
 
-                enemy.ReplaceDirection(Vector3.zero.normalized);
+                enemy.ReplaceDirection((_heroes.GetEntities()[0].WorldPosition - enemy.WorldPosition).normalized);
             }
         }
     }
