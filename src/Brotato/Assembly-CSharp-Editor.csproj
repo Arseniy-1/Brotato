@@ -41,12 +41,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Folder Include="Assets\Entitas\DesperateDevs\Editor" />
      <Folder Include="Assets\Entitas\Entitas\Editor\Images" />
-     <Folder Include="Assets\Entitas\Jenny\Editor\Images" />
+     <Folder Include="Assets\Entitas\DesperateDevs\Editor" />
      <Folder Include="Assets\Entitas\Entitas\Editor" />
+     <Folder Include="Assets\Editor" />
      <Folder Include="Assets\Entitas\Jenny\Editor\Jenny" />
      <Folder Include="Assets\Entitas\Jenny\Editor" />
+     <Folder Include="Assets\Entitas\Jenny\Editor\Images" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

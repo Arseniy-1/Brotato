@@ -735,50 +735,62 @@
      <Reference Include="UnityEditor.WindowsStandalone.Extensions">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
-     <Reference Include="Jenny.Generator">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Jenny\Editor\Jenny.Generator.dll</HintPath>
-     </Reference>
-     <Reference Include="Entitas.VisualDebugging.Unity.Editor">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Editor\Entitas.VisualDebugging.Unity.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Zenject-usage">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
-     </Reference>
-     <Reference Include="Sherlog">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Sherlog\Sherlog.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.YamlDotNet">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
      </Reference>
+     <Reference Include="Entitas.VisualDebugging.Unity.Editor">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Editor\Entitas.VisualDebugging.Unity.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="TCPeasy">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\TCPeasy\TCPeasy.dll</HintPath>
      </Reference>
-     <Reference Include="DesperateDevs.Reflection">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\DesperateDevs\DesperateDevs.Reflection.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Collections.LowLevel.ILSupport">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
-     </Reference>
-     <Reference Include="Jenny">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Jenny\Editor\Jenny.dll</HintPath>
-     </Reference>
-     <Reference Include="Jenny.Generator.Unity.Editor">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Jenny\Editor\Jenny.Generator.Unity.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="unityplastic">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Library\PackageCache\com.unity.collab-proxy@2.8.1\Lib\Editor\unityplastic.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Library\PackageCache\com.unity.collab-proxy@2.8.1\Lib\Editor\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+     <Reference Include="Sherlog.Formatters">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Sherlog\Sherlog.Formatters.dll</HintPath>
      </Reference>
      <Reference Include="Entitas.Migration">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Editor\Entitas.Migration.dll</HintPath>
      </Reference>
-     <Reference Include="Entitas.Unity">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Entitas.Unity.dll</HintPath>
+     <Reference Include="Unity.Collections.LowLevel.ILSupport">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+     </Reference>
+     <Reference Include="DesperateDevs.Caching">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\DesperateDevs\DesperateDevs.Caching.dll</HintPath>
+     </Reference>
+     <Reference Include="Sherlog">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Sherlog\Sherlog.dll</HintPath>
+     </Reference>
+     <Reference Include="Jenny">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Jenny\Editor\Jenny.dll</HintPath>
+     </Reference>
+     <Reference Include="DesperateDevs.Serialization">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\DesperateDevs\DesperateDevs.Serialization.dll</HintPath>
+     </Reference>
+     <Reference Include="unityplastic">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Library\PackageCache\com.unity.collab-proxy@2.8.1\Lib\Editor\unityplastic.dll</HintPath>
+     </Reference>
+     <Reference Include="Entitas.Migration.Unity.Editor">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Editor\Entitas.Migration.Unity.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Plastic.Antlr3.Runtime">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Library\PackageCache\com.unity.collab-proxy@2.8.1\Lib\Editor\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Entitas.Unity.Editor">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Editor\Entitas.Unity.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="DesperateDevs.Threading">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\DesperateDevs\DesperateDevs.Threading.dll</HintPath>
+     </Reference>
+     <Reference Include="DesperateDevs.Unity.Editor">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\DesperateDevs\DesperateDevs.Unity.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Library\PackageCache\com.unity.collab-proxy@2.8.1\Lib\Editor\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="Entitas.CodeGeneration.Attributes">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Entitas.CodeGeneration.Attributes.dll</HintPath>
      </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
@@ -789,65 +801,53 @@
      <Reference Include="log4netPlastic">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Library\PackageCache\com.unity.collab-proxy@2.8.1\Lib\Editor\log4netPlastic.dll</HintPath>
      </Reference>
-     <Reference Include="DesperateDevs.Extensions">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\DesperateDevs\DesperateDevs.Extensions.dll</HintPath>
+     <Reference Include="DesperateDevs.Unity">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\DesperateDevs\DesperateDevs.Unity.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.IonicZip">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
      </Reference>
-     <Reference Include="DesperateDevs.Unity">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\DesperateDevs\DesperateDevs.Unity.dll</HintPath>
+     <Reference Include="DesperateDevs.Extensions">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\DesperateDevs\DesperateDevs.Extensions.dll</HintPath>
      </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
      </Reference>
-     <Reference Include="DesperateDevs.Caching">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\DesperateDevs\DesperateDevs.Caching.dll</HintPath>
+     <Reference Include="Jenny.Plugins.Unity">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Jenny\Editor\Jenny\Jenny.Plugins.Unity.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
-     <Reference Include="Entitas.Unity.Editor">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Editor\Entitas.Unity.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Jenny.Plugins">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Jenny\Editor\Jenny\Jenny.Plugins.dll</HintPath>
-     </Reference>
-     <Reference Include="Entitas.VisualDebugging.Unity">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Entitas.VisualDebugging.Unity.dll</HintPath>
-     </Reference>
-     <Reference Include="Entitas.Migration.Unity.Editor">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Editor\Entitas.Migration.Unity.Editor.dll</HintPath>
+     <Reference Include="Entitas">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Entitas.dll</HintPath>
      </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
      </Reference>
-     <Reference Include="DesperateDevs.Unity.Editor">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\DesperateDevs\Editor\DesperateDevs.Unity.Editor.dll</HintPath>
+     <Reference Include="Entitas.VisualDebugging.Unity">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Entitas.VisualDebugging.Unity.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.TextureAssets">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
      </Reference>
-     <Reference Include="Sherlog.Formatters">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Sherlog\Sherlog.Formatters.dll</HintPath>
+     <Reference Include="Jenny.Plugins">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Jenny\Editor\Jenny\Jenny.Plugins.dll</HintPath>
      </Reference>
-     <Reference Include="DesperateDevs.Serialization">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\DesperateDevs\DesperateDevs.Serialization.dll</HintPath>
+     <Reference Include="DesperateDevs.Reflection">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\DesperateDevs\DesperateDevs.Reflection.dll</HintPath>
      </Reference>
-     <Reference Include="Jenny.Plugins.Unity">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Jenny\Editor\Jenny\Jenny.Plugins.Unity.dll</HintPath>
+     <Reference Include="Jenny.Generator">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Jenny\Editor\Jenny.Generator.dll</HintPath>
      </Reference>
-     <Reference Include="Entitas.CodeGeneration.Attributes">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Entitas.CodeGeneration.Attributes.dll</HintPath>
+     <Reference Include="Entitas.Unity">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Entitas.Unity.dll</HintPath>
      </Reference>
-     <Reference Include="DesperateDevs.Threading">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\DesperateDevs\DesperateDevs.Threading.dll</HintPath>
+     <Reference Include="Jenny.Generator.Unity.Editor">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Jenny\Editor\Jenny.Generator.Unity.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
-     </Reference>
-     <Reference Include="Entitas">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Entitas.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.iOS.Extensions.Xcode">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
