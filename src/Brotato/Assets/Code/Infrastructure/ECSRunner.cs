@@ -31,6 +31,7 @@ namespace Code.Infrastructure
             _timeService = new UnityTimeService();
             _inputService = new StandaloneInputService();
             _cameraProvider = new CameraProvider();
+            _cameraProvider.SetMainCamera(Camera.main);
         }
 
         private void Start()
