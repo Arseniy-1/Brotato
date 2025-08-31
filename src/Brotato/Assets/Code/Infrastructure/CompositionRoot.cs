@@ -2,6 +2,7 @@ using Code.Gameplay.Cameras.Provider;
 using Code.Gameplay.Common.Time;
 using Code.Gameplay.Input.Service;
 using Code.Infrastructure.AssetManagement;
+using Code.Infrastructure.Systems;
 using UnityEngine;
 using Zenject;
 
@@ -16,6 +17,13 @@ namespace Code.Infrastructure
             BindAssetManagementServices();
             BindCameraProvider();
             BindContexts();
+
+            BindSystemFactory();
+        }
+
+        private void BindSystemFactory()
+        {
+            Container.Bind<ISystemFactory>().To<SystemFactory>().AsSingle();
         }
 
         private void BindInputService()

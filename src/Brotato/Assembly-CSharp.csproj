@@ -51,6 +51,7 @@
      <Compile Include="Assets\Code\Generated\Input\InputEntity.cs" />
      <Compile Include="Assets\Code\Common\Extensions\VectorExtensions.cs" />
      <Compile Include="Assets\Code\Generated\Game\GameEntity.cs" />
+     <Compile Include="Assets\Code\Gameplay\Common\Physics\PhysicsService.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputAttribute.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Systems\SetHeroDirectionByInputSystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\GameComponentsLookup.cs" />
@@ -62,9 +63,11 @@
      <Compile Include="Assets\Code\Gameplay\Features\Hero\HeroFeature.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameWorldPositionComponent.cs" />
      <Compile Include="Assets\Code\Common\Extensions\TransformExtensions.cs" />
+     <Compile Include="Assets\Code\Gameplay\Common\Collisions\ICollisionRegistry.cs" />
      <Compile Include="Assets\Code\Gameplay\Cameras\Provider\ICameraProvider.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\IEntityView.cs" />
      <Compile Include="Assets\Code\Gameplay\Input\Systems\EmitInputSystem.cs" />
+     <Compile Include="Assets\Code\Infrastructure\Systems\ISystemFactory.cs" />
      <Compile Include="Assets\Code\Common\Systems\CleanupGameDestructedSystem.cs" />
      <Compile Include="Assets\Code\Generated\Contexts.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameAxisInputComponent.cs" />
@@ -98,7 +101,10 @@
      <Compile Include="Assets\Code\Generated\Game\Components\GameInputComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Input\Service\StandaloneInputService.cs" />
      <Compile Include="Assets\Code\Generated\Game\GameContext.cs" />
+     <Compile Include="Assets\Code\Gameplay\Common\Physics\IPhysicsService.cs" />
+     <Compile Include="Assets\Code\Infrastructure\Systems\SystemFactory.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameSpriteRendererComponent.cs" />
+     <Compile Include="Assets\Code\Gameplay\Common\Collisions\CollisionRegistry.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputMatcher.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\UpdateTransformPositionSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Cameras\Systems\CameraFollowHeroSystem.cs" />
@@ -130,6 +136,7 @@
      <Folder Include="Assets\Entitas\Entitas" />
      <Folder Include="Assets\Code\Gameplay\Features\Hero\Behaviours" />
      <Folder Include="Assets\TCPeasy" />
+     <Folder Include="Assets\Code\Gameplay\Common\Physics" />
      <Folder Include="Assets\Code\Generated\Meta" />
      <Folder Include="Assets\Entitas" />
      <Folder Include="Assets\Code\Gameplay\Common" />
@@ -158,9 +165,11 @@
      <Folder Include="Assets\Code\Infrastructure\View" />
      <Folder Include="Assets\Project\Sprites\Tiles\DesertPallete" />
      <Folder Include="Assets\Project\Sprites\Tiles" />
+     <Folder Include="Assets\Code\Gameplay\Common\Collisions" />
      <Folder Include="Assets\Project" />
      <Folder Include="Assets\Project\Prefabs" />
      <Folder Include="Assets\Code\Gameplay\Features\Hero\Registrars" />
+     <Folder Include="Assets\Code\Infrastructure\Systems" />
      <Folder Include="Assets\Entitas\DesperateDevs" />
      <Folder Include="Assets\Project\Scenes" />
      <Folder Include="Assets\Code\Infrastructure\AssetManagement" />
