@@ -1,4 +1,5 @@
-﻿using Entitas;
+﻿using Code.Infrastructure.View;
+using Entitas;
 using UnityEngine;
 
 namespace Code.Gameplay.Common

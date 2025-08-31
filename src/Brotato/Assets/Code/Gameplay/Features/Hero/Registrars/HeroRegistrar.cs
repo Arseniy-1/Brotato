@@ -1,5 +1,4 @@
-﻿using System;
-using Code.Common.Entity;
+﻿using Code.Common.Entity;
 using Code.Common.Extensions;
 using Code.Gameplay.Features.Hero.Behaviours;
 using UnityEngine;
