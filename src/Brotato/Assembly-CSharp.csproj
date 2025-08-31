@@ -73,9 +73,11 @@
      <Compile Include="Assets\Code\Generated\Game\Components\GameHeroComponent.cs" />
      <Compile Include="Assets\Code\Generated\Feature.cs" />
      <Compile Include="Assets\Code\Generated\Meta\MetaContext.cs" />
+     <Compile Include="Assets\Code\Infrastructure\AssetManagement\IAssetProvider.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameTurnedAlongDirectionComponent.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\EntityBehaviour.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\Registrars\IEntityComponentRegistrar.cs" />
+     <Compile Include="Assets\Code\Infrastructure\CompositionRoot.cs" />
      <Compile Include="Assets\Code\Generated\Game\GameMatcher.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Behaviours\HeroAnimator.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameHeroAnimatorComponent.cs" />
@@ -111,6 +113,7 @@
      <Compile Include="Assets\Code\Gameplay\Features\Movement\MovementComponents.cs" />
      <Compile Include="Assets\Code\Gameplay\Input\InputFeature.cs" />
      <Compile Include="Assets\Code\Generated\Meta\MetaEntity.cs" />
+     <Compile Include="Assets\Code\Infrastructure\AssetManagement\AssetProvider.cs" />
      <Compile Include="Assets\Code\Common\Extensions\FunctionalExtensions.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Time\ITimeService.cs" />
      <Compile Include="Assets\Code\Common\Systems\ViewDestructedSystem.cs" />
@@ -160,6 +163,7 @@
      <Folder Include="Assets\Code\Gameplay\Features\Hero\Registrars" />
      <Folder Include="Assets\Entitas\DesperateDevs" />
      <Folder Include="Assets\Project\Scenes" />
+     <Folder Include="Assets\Code\Infrastructure\AssetManagement" />
      <Folder Include="Assets\Code\Common\Systems" />
      <Folder Include="Assets\Code" />
      <Folder Include="Assets\Entitas\Jenny" />

@@ -17,21 +17,13 @@ namespace Code.Infrastructure
         private IInputService _inputService;
         private ICameraProvider _cameraProvider;
 
-        // [Inject]
-        // private void Construct(GameContext gameContext, ITimeService timeService, IInputService inputService)
-        // {
-        //     _gameContext = gameContext;
-        //     _timeService = timeService;
-        //     _inputService = inputService;
-        // }
-
-        private void Awake()
+        [Inject]
+        private void Construct(GameContext gameContext, ITimeService timeService, IInputService inputService, ICameraProvider cameraProvider)
         {
-            _gameContext = Contexts.sharedInstance.game;
-            _timeService = new UnityTimeService();
-            _inputService = new StandaloneInputService();
-            _cameraProvider = new CameraProvider();
-            _cameraProvider.SetMainCamera(Camera.main);
+            _gameContext = gameContext;
+            _timeService = timeService;
+            _inputService = inputService;
+            _cameraProvider = cameraProvider;
         }
 
         private void Start()

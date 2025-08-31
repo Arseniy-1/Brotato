@@ -9,6 +9,13 @@ namespace Code.Gameplay.Cameras.Provider
     public float WorldScreenHeight { get; private set; }
     public float WorldScreenWidth { get; private set; }
 
+    public CameraProvider(Camera camera)
+    {
+      MainCamera = camera;
+
+      RefreshBoundaries();
+    }
+    
     public void SetMainCamera(Camera camera)
     {
       MainCamera = camera;
