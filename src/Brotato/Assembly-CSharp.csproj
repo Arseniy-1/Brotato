@@ -61,6 +61,7 @@
      <Compile Include="Assets\Code\Gameplay\Common\CommonComponents.cs" />
      <Compile Include="Assets\Code\Gameplay\Input\Systems\InitializeInputSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\HeroFeature.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameIdComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameWorldPositionComponent.cs" />
      <Compile Include="Assets\Code\Common\Extensions\TransformExtensions.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Collisions\ICollisionRegistry.cs" />
@@ -79,6 +80,7 @@
      <Compile Include="Assets\Code\Infrastructure\AssetManagement\IAssetProvider.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameTurnedAlongDirectionComponent.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\EntityBehaviour.cs" />
+     <Compile Include="Assets\Code\Infrastructure\Identifiers\IIdentifierService.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\Registrars\IEntityComponentRegistrar.cs" />
      <Compile Include="Assets\Code\Infrastructure\CompositionRoot.cs" />
      <Compile Include="Assets\Code\Generated\Game\GameMatcher.cs" />
@@ -86,6 +88,7 @@
      <Compile Include="Assets\Code\Generated\Game\Components\GameHeroAnimatorComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameSelfDestructTimerComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Cameras\Provider\CameraProvider.cs" />
+     <Compile Include="Assets\Code\Infrastructure\Identifiers\IdentifierService.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\MoveByDirectionSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\DirectionalDeltaMoveSystem.cs" />
      <Compile Include="Assets\Code\Generated\Meta\MetaMatcher.cs" />
@@ -107,6 +110,7 @@
      <Compile Include="Assets\Code\Gameplay\Common\Collisions\CollisionRegistry.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputMatcher.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\UpdateTransformPositionSystem.cs" />
+     <Compile Include="Assets\Code\Infrastructure\View\SelfInitializedEntity.cs" />
      <Compile Include="Assets\Code\Gameplay\Cameras\Systems\CameraFollowHeroSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Registrars\HeroRegistrar.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\TurnAlongDirectionSystem.cs" />
@@ -174,6 +178,7 @@
      <Folder Include="Assets\Project\Scenes" />
      <Folder Include="Assets\Code\Infrastructure\AssetManagement" />
      <Folder Include="Assets\Code\Common\Systems" />
+     <Folder Include="Assets\Code\Infrastructure\Identifiers" />
      <Folder Include="Assets\Code" />
      <Folder Include="Assets\Entitas\Jenny" />
      <Folder Include="Assets\Entitas\TCPeasy" />
