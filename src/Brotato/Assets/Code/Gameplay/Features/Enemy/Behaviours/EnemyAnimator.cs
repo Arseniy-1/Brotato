@@ -1,8 +1,9 @@
+using Code.Gameplay.Common;
 using UnityEngine;
 
 namespace Code.Gameplay.Features.Enemy.Behaviours
 {
-    public class EnemyAnimator : MonoBehaviour
+    public class EnemyAnimator : MonoBehaviour, IDamageTakenAnimator
     {
         private static readonly int OverlayIntensityProperty = Shader.PropertyToID("_OverlayIntensity");
 
