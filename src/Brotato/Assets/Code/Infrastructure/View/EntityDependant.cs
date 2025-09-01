@@ -9,10 +9,8 @@ namespace Code.Infrastructure.View
 
         private void Awake()
         {
-            if (!EntityView)
-            {
-                
-            }    
+            if (!EntityView) 
+                EntityView = GetComponent<EntityBehaviour>();    
         }
     }
 }

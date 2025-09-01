@@ -45,11 +45,11 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Code\Infrastructure\View\Registrars\EntityComponentRegistrar.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\HeroComponents.cs" />
      <Compile Include="Assets\Code\Generated\Meta\MetaAttribute.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputEntity.cs" />
      <Compile Include="Assets\Code\Common\Extensions\VectorExtensions.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enemy\EnemyComponents.cs" />
      <Compile Include="Assets\Code\Generated\Game\GameEntity.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Physics\PhysicsService.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputAttribute.cs" />
@@ -60,6 +60,7 @@
      <Compile Include="Assets\Code\Gameplay\Input\InputComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\CommonComponents.cs" />
      <Compile Include="Assets\Code\Gameplay\Input\Systems\InitializeInputSystem.cs" />
+     <Compile Include="Assets\Code\Common\Registrars\TransformRegistrar.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\HeroFeature.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameIdComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameWorldPositionComponent.cs" />
@@ -70,6 +71,7 @@
      <Compile Include="Assets\Code\Gameplay\Input\Systems\EmitInputSystem.cs" />
      <Compile Include="Assets\Code\Infrastructure\Systems\ISystemFactory.cs" />
      <Compile Include="Assets\Code\Common\Systems\CleanupGameDestructedSystem.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameEnemyComponent.cs" />
      <Compile Include="Assets\Code\Generated\Contexts.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameAxisInputComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\BattleFeature.cs" />
@@ -82,18 +84,23 @@
      <Compile Include="Assets\Code\Infrastructure\View\EntityBehaviour.cs" />
      <Compile Include="Assets\Code\Infrastructure\Identifiers\IIdentifierService.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\Registrars\IEntityComponentRegistrar.cs" />
+     <Compile Include="Assets\Code\Common\Registrars\SpriteRendererRegistrar.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enemy\Registrar\EnemyAnimatorRegistrar.cs" />
      <Compile Include="Assets\Code\Infrastructure\CompositionRoot.cs" />
      <Compile Include="Assets\Code\Generated\Game\GameMatcher.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Behaviours\HeroAnimator.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameHeroAnimatorComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameSelfDestructTimerComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Cameras\Provider\CameraProvider.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enemy\Registrar\EnemyRegistrar.cs" />
      <Compile Include="Assets\Code\Infrastructure\Identifiers\IdentifierService.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\MoveByDirectionSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\DirectionalDeltaMoveSystem.cs" />
      <Compile Include="Assets\Code\Generated\Meta\MetaMatcher.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputContext.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enemy\Behaviours\EnemyAnimator.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputComponentsLookup.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Hero\Registrars\HeroAnimatorRegistrar.cs" />
      <Compile Include="Assets\Code\Common\Extensions\CollisionExtensions.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameDirectionComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Time\UnityTimeService.cs" />
@@ -125,12 +132,14 @@
      <Compile Include="Assets\Code\Generated\Meta\MetaEntity.cs" />
      <Compile Include="Assets\Code\Infrastructure\AssetManagement\AssetProvider.cs" />
      <Compile Include="Assets\Code\Common\Extensions\FunctionalExtensions.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameEnemyAnimatorComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Time\ITimeService.cs" />
      <Compile Include="Assets\Code\Common\Systems\ViewDestructedSystem.cs" />
      <Compile Include="Assets\Code\Common\ProcessDestructedFeature.cs" />
      <Compile Include="Assets\Code\Gameplay\Input\Service\IInputService.cs" />
      <Compile Include="Assets\Code\Common\Systems\SelfDestructTimerSystem.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\EntityDependant.cs" />
+     <Compile Include="Assets\Code\Infrastructure\View\Registrars\EntityComponentRegistrar.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Code\Common" />
      <Folder Include="Assets\Code\Gameplay\Features\Hero" />
@@ -144,13 +153,16 @@
      <Folder Include="Assets\Code\Generated\Meta" />
      <Folder Include="Assets\Entitas" />
      <Folder Include="Assets\Code\Gameplay\Common" />
+     <Folder Include="Assets\Code\Gameplay\Features\Enemy\Registrar" />
      <Folder Include="Assets\Code\Gameplay\Common\Time" />
      <None Include="Assets\Entitas\Entitas\LICENSE.txt" />
      <Folder Include="Assets\Code\Gameplay\Features\Movement" />
      <Folder Include="Assets\Project\Sprites\Player\Animations" />
+     <Folder Include="Assets\Code\Gameplay\Features\Enemy\Behaviours" />
      <Folder Include="Assets\Code\Gameplay\Features" />
      <Folder Include="Assets\Code\Infrastructure\View\Registrars" />
      <Folder Include="Assets\Code\Gameplay\Cameras\Provider" />
+     <Folder Include="Assets\Code\Gameplay\Features\Enemy" />
      <Folder Include="Assets\Project\Sprites" />
      <Folder Include="Assets\Code\Gameplay\Input\Systems" />
      <Folder Include="Assets\Code\Gameplay\Cameras" />
@@ -159,6 +171,7 @@
      <Folder Include="Assets\Code\Infrastructure" />
      <Folder Include="Assets\Code\Generated\Game" />
      <Folder Include="Assets\Code\Gameplay" />
+     <Folder Include="Assets\Code\Common\Registrars" />
      <Folder Include="Assets\Code\Generated" />
      <Folder Include="Assets\Code\Gameplay\Features\Movement\Systems" />
      <Folder Include="Assets\Sherlog" />
@@ -449,6 +462,9 @@
      </Reference>
      <Reference Include="Unity.Collections.LowLevel.ILSupport">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+     </Reference>
+     <Reference Include="DesperateDevs.Unity.Editor">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\DesperateDevs\DesperateDevs.Unity.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Entitas.Unity">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Entitas.Unity.dll</HintPath>

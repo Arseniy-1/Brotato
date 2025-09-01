@@ -1,9 +1,9 @@
-﻿using Code.Common.Extensions;
+using Code.Common.Extensions;
 using Code.Infrastructure.View.Registrars;
 
-namespace Code.Gameplay.Features.Hero.Registrars
+namespace Code.Gameplay.Features.Enemy.Registrar
 {
-    public class HeroRegistrar : EntityComponentRegistrar
+    public class EnemyRegistrar : EntityComponentRegistrar
     {
         public float Speed = 2;
 
@@ -19,7 +19,9 @@ namespace Code.Gameplay.Features.Hero.Registrars
 
         public override void UnregisterComponents()
         {
-            
+            throw new System.NotImplementedException();
         }
     }
+    
+    
 }

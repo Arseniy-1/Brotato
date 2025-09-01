@@ -15,16 +15,18 @@ public static class GameComponentsLookup {
     public const int SpriteRenderer = 4;
     public const int Transform = 5;
     public const int WorldPosition = 6;
-    public const int Hero = 7;
-    public const int HeroAnimator = 8;
-    public const int Direction = 9;
-    public const int Moving = 10;
-    public const int Speed = 11;
-    public const int TurnedAlongDirection = 12;
-    public const int AxisInput = 13;
-    public const int Input = 14;
+    public const int Enemy = 7;
+    public const int EnemyAnimator = 8;
+    public const int Hero = 9;
+    public const int HeroAnimator = 10;
+    public const int Direction = 11;
+    public const int Moving = 12;
+    public const int Speed = 13;
+    public const int TurnedAlongDirection = 14;
+    public const int AxisInput = 15;
+    public const int Input = 16;
 
-    public const int TotalComponents = 15;
+    public const int TotalComponents = 17;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -34,6 +36,8 @@ public static class GameComponentsLookup {
         "SpriteRenderer",
         "Transform",
         "WorldPosition",
+        "Enemy",
+        "EnemyAnimator",
         "Hero",
         "HeroAnimator",
         "Direction",
@@ -52,6 +56,8 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Common.SpriteRendererComponent),
         typeof(Code.Gameplay.Common.TransformComponent),
         typeof(Code.Gameplay.Common.WorldPosition),
+        typeof(Code.Gameplay.Features.Enemy.Enemy),
+        typeof(Code.Gameplay.Features.Enemy.EnemyAnimatorComponent),
         typeof(Code.Gameplay.Features.Hero.Hero),
         typeof(Code.Gameplay.Features.Hero.HeroAnimatorComponent),
         typeof(Code.Gameplay.Features.Movement.Direction),
