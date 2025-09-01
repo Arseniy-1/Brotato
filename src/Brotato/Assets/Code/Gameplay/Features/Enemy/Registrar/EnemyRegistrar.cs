@@ -10,18 +10,16 @@ namespace Code.Gameplay.Features.Enemy.Registrar
         public override void RegisterComponents()
         {
             Entity
+                .AddEnemyTypeId(EnemyTypeId.BabyAlient)
                 .AddWorldPosition(transform.position)
                 .AddDirection(transform.forward)
                 .AddSpeed(Speed)
-                .With(x => x.isHero = true)
+                .With(x => x.isEnemy = true)
                 .With(x => x.isTurnedAlongDirection = true);
         }
 
         public override void UnregisterComponents()
         {
-            throw new System.NotImplementedException();
         }
     }
-    
-    
 }

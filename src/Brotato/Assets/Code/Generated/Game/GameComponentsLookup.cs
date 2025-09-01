@@ -17,16 +17,18 @@ public static class GameComponentsLookup {
     public const int WorldPosition = 6;
     public const int Enemy = 7;
     public const int EnemyAnimator = 8;
-    public const int Hero = 9;
-    public const int HeroAnimator = 10;
-    public const int Direction = 11;
-    public const int Moving = 12;
-    public const int Speed = 13;
-    public const int TurnedAlongDirection = 14;
-    public const int AxisInput = 15;
-    public const int Input = 16;
+    public const int EnemyTypeId = 9;
+    public const int SpawnTimer = 10;
+    public const int Hero = 11;
+    public const int HeroAnimator = 12;
+    public const int Direction = 13;
+    public const int Moving = 14;
+    public const int Speed = 15;
+    public const int TurnedAlongDirection = 16;
+    public const int AxisInput = 17;
+    public const int Input = 18;
 
-    public const int TotalComponents = 17;
+    public const int TotalComponents = 19;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -38,6 +40,8 @@ public static class GameComponentsLookup {
         "WorldPosition",
         "Enemy",
         "EnemyAnimator",
+        "EnemyTypeId",
+        "SpawnTimer",
         "Hero",
         "HeroAnimator",
         "Direction",
@@ -58,6 +62,8 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Common.WorldPosition),
         typeof(Code.Gameplay.Features.Enemy.Enemy),
         typeof(Code.Gameplay.Features.Enemy.EnemyAnimatorComponent),
+        typeof(Code.Gameplay.Features.Enemy.EnemyTypeIdComponent),
+        typeof(Code.Gameplay.Features.Enemy.SpawnTimer),
         typeof(Code.Gameplay.Features.Hero.Hero),
         typeof(Code.Gameplay.Features.Hero.HeroAnimatorComponent),
         typeof(Code.Gameplay.Features.Movement.Direction),

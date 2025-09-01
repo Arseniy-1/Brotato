@@ -93,6 +93,7 @@
      <Compile Include="Assets\Code\Generated\Game\Components\GameSelfDestructTimerComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Cameras\Provider\CameraProvider.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Enemy\Registrar\EnemyRegistrar.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameEnemyTypeIDComponent.cs" />
      <Compile Include="Assets\Code\Infrastructure\Identifiers\IdentifierService.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\MoveByDirectionSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\DirectionalDeltaMoveSystem.cs" />
@@ -104,11 +105,13 @@
      <Compile Include="Assets\Code\Common\Extensions\CollisionExtensions.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameDirectionComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Time\UnityTimeService.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enemy\EnemyTypeId.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameDestructedComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\GameAttribute.cs" />
      <Compile Include="Assets\Code\Common\Entity\CreateEntity.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\MovementFeature.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameInputComponent.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enemy\Registrar\ChaseHeroSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Input\Service\StandaloneInputService.cs" />
      <Compile Include="Assets\Code\Generated\Game\GameContext.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Physics\IPhysicsService.cs" />
@@ -122,9 +125,11 @@
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Registrars\HeroRegistrar.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\TurnAlongDirectionSystem.cs" />
      <Compile Include="Assets\Code\Common\Extensions\EnumerableExtensions.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameSpawnTimerComponent.cs" />
      <Compile Include="Assets\Code\Generated\Meta\MetaComponentsLookup.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameSpeedComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameMovingComponent.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enemy\EnemyFeature.cs" />
      <Compile Include="Assets\Code\Common\Extensions\NumericExtensions.cs" />
      <Compile Include="Assets\Code\Common\CommonComponents.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\MovementComponents.cs" />
@@ -189,6 +194,7 @@
      <Folder Include="Assets\Code\Infrastructure\Systems" />
      <Folder Include="Assets\Entitas\DesperateDevs" />
      <Folder Include="Assets\Project\Scenes" />
+     <Folder Include="Assets\Project\Sprites\Enemy\Animations" />
      <Folder Include="Assets\Code\Infrastructure\AssetManagement" />
      <Folder Include="Assets\Code\Common\Systems" />
      <Folder Include="Assets\Code\Infrastructure\Identifiers" />
