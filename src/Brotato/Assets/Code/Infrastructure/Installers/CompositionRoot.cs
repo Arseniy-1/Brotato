@@ -2,14 +2,18 @@ using Code.Gameplay.Cameras.Provider;
 using Code.Gameplay.Common.Collisions;
 using Code.Gameplay.Common.Physics;
 using Code.Gameplay.Common.Time;
+using Code.Gameplay.Features.Enemy.Factory;
+using Code.Gameplay.Features.Hero.Factory;
 using Code.Gameplay.Input.Service;
+using Code.Gameplay.Levels;
 using Code.Infrastructure.AssetManagement;
 using Code.Infrastructure.Identifiers;
 using Code.Infrastructure.Systems;
+using Code.Infrastructure.View;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Infrastructure
+namespace Code.Infrastructure.Installers
 {
     public class CompositionRoot : MonoInstaller
     {
@@ -22,6 +26,7 @@ namespace Code.Infrastructure
             BindContexts();
 
             BindSystemFactory();
+            BindGameplayFactories();
         }
 
         private void BindSystemFactory()
@@ -42,9 +47,17 @@ namespace Code.Infrastructure
             Container.Bind<IIdentifierService>().To<IdentifierService>().AsSingle();
         }
 
+        private void BindGameplayFactories()
+        {
+            Container.Bind<IHeroFactory>().To<HeroFactory>().AsSingle();
+            Container.Bind<IEnemyFactory>().To<EnemyFactory>().AsSingle();
+            Container.Bind<IEntityViewFactory>().To<EntityViewFactory>().AsSingle();
+        }
+
         private void BindAssetManagementServices()
         {
             Container.Bind<IAssetProvider>().To<AssetProvider>().AsSingle();
+            Container.Bind<ILevelDataProvider>().To<LevelDataProvider>().AsSingle();
         }
 
         private void BindCameraProvider()

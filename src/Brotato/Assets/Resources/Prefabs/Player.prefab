@@ -454,12 +454,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1367798633845070032}
   - component: {fileID: 239134441181057983}
-  - component: {fileID: -7516105001381149010}
   - component: {fileID: 7649588752770728684}
   - component: {fileID: 4618429315492400425}
   - component: {fileID: 2183063089045504791}
   - component: {fileID: 6313117553800341672}
-  - component: {fileID: 4892067829116794133}
   - component: {fileID: 4730603267581973039}
   m_Layer: 6
   m_Name: Player
@@ -499,21 +497,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Animator: {fileID: 3755800404348501533}
   SpriteRenderer: {fileID: 3294890602514411197}
---- !u!114 &-7516105001381149010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4752413289159063764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c3c2df9000b4c4eb6f64da3e1f15b45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EntityView: {fileID: 7649588752770728684}
-  Speed: 2
-  MaxHP: 100
 --- !u!114 &7649588752770728684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,19 +550,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityView: {fileID: 7649588752770728684}
   SpriteRenderer: {fileID: 3294890602514411197}
---- !u!114 &4892067829116794133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4752413289159063764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a81dd5e1e55b4beab0042796bced3de1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EntityBehaviour: {fileID: 7649588752770728684}
 --- !u!58 &4730603267581973039
 CircleCollider2D:
   m_ObjectHideFlags: 0
