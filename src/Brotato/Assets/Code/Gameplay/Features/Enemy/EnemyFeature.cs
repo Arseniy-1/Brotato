@@ -1,4 +1,4 @@
-using Code.Gameplay.Features.Enemy.Registrar;
+using Code.Gameplay.Features.Enemy.Systems;
 using Code.Infrastructure.Systems;
 
 namespace Code.Gameplay.Features.Enemy
@@ -8,6 +8,8 @@ namespace Code.Gameplay.Features.Enemy
         public EnemyFeature(ISystemFactory systemFactory)
         {
             Add(systemFactory.Create<ChaseHeroSystem>());
+            Add(systemFactory.Create<EnemyDeathSystem>());
+            Add(systemFactory.Create<FinalizeEnemyDeathProcessingSystem>());
         }
     }
 }

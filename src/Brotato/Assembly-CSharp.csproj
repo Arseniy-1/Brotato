@@ -45,22 +45,24 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Code\Generated\Game\Components\GameReadyToCollectTargetsComponent.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\TargetCollectionEntityExtensions.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameMovementAvailableComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameCurentHPComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\HeroComponents.cs" />
      <Compile Include="Assets\Code\Generated\Meta\MetaAttribute.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameRadiusComponent.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputEntity.cs" />
-     <Compile Include="Assets\Code\Common\Extensions\VectorExtensions.cs" />
      <Compile Include="Assets\Code\Common\Entity\ToStrings\MetaEntity.cs" />
+     <Compile Include="Assets\Code\Common\Extensions\VectorExtensions.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Enemy\EnemyComponents.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\Systems\CleanupTargetBuffersSystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\GameEntity.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Physics\PhysicsService.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputAttribute.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Systems\SetHeroDirectionByInputSystem.cs" />
-     <Compile Include="Assets\Code\Gameplay\Features\Enemy\ChaseHeroSystem.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Lifetime\Systems\DeathFeature.cs" />
      <Compile Include="Assets\Code\Generated\Game\GameComponentsLookup.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enemy\Systems\FinalizeEnemyDeathProcessingSystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameViewComponent.cs" />
      <Compile Include="Assets\Code\Infrastructure\ECSRunner.cs" />
      <Compile Include="Assets\Code\Gameplay\Input\InputComponent.cs" />
@@ -76,7 +78,9 @@
      <Compile Include="Assets\Code\Infrastructure\View\IEntityView.cs" />
      <Compile Include="Assets\Code\Gameplay\Input\Systems\EmitInputSystem.cs" />
      <Compile Include="Assets\Code\Infrastructure\Systems\ISystemFactory.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Lifetime\Systems\MarkDeadSystem.cs" />
      <Compile Include="Assets\Code\Common\Systems\CleanupGameDestructedSystem.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameDeadComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameEnemyComponent.cs" />
      <Compile Include="Assets\Code\Generated\Contexts.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameAxisInputComponent.cs" />
@@ -94,6 +98,7 @@
      <Compile Include="Assets\Code\Common\Registrars\SpriteRendererRegistrar.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\IDamageTakenAnimator.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Enemy\Registrar\EnemyAnimatorRegistrar.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enemy\Systems\EnemyDeathSystem.cs" />
      <Compile Include="Assets\Code\Infrastructure\CompositionRoot.cs" />
      <Compile Include="Assets\Code\Generated\Game\GameMatcher.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Behaviours\HeroAnimator.cs" />
@@ -101,11 +106,12 @@
      <Compile Include="Assets\Code\Generated\Game\Components\GameSelfDestructTimerComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Cameras\Provider\CameraProvider.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Enemy\Registrar\EnemyRegistrar.cs" />
-     <Compile Include="Assets\Code\Generated\Game\Components\GameEnemyTypeIDComponent.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enemy\Systems\ChaseHeroSystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameTargetsBufferComponent.cs" />
      <Compile Include="Assets\Code\Infrastructure\Identifiers\IdentifierService.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\Systems\CastForTargetsSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\CollectTargetFeature.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Hero\Systems\AnimateHeroMoveSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\MoveByDirectionSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\DirectionalDeltaMoveSystem.cs" />
      <Compile Include="Assets\Code\Generated\Meta\MetaMatcher.cs" />
@@ -130,19 +136,20 @@
      <Compile Include="Assets\Code\Common\Entity\ToStrings\GameEntity.cs" />
      <Compile Include="Assets\Code\Infrastructure\Systems\SystemFactory.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameSpriteRendererComponent.cs" />
-     <Compile Include="Assets\Code\Gameplay\Features\DamageApplication\Systems\DestructOnZeroHPSystem.cs" />
      <Compile Include="Assets\Code\Common\Entity\ToStrings\InputEntity.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Collisions\CollisionRegistry.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputMatcher.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\UpdateTransformPositionSystem.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\SelfInitializedEntity.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameDamageComponent.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Hero\Systems\FinalizeHeroDeathProcessingSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Cameras\Systems\CameraFollowHeroSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Registrars\HeroRegistrar.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameCollectTargetsIntervalComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\TurnAlongDirectionSystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameLayerMaskComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameDamageTakenAnimatorComponent.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameProcessingDeathComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\DamageApplication\Systems\ApplyDamageOnTargetsSystem.cs" />
      <Compile Include="Assets\Code\Common\Extensions\EnumerableExtensions.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameSpawnTimerComponent.cs" />
@@ -171,7 +178,9 @@
      <Compile Include="Assets\Code\Gameplay\Input\Service\IInputService.cs" />
      <Compile Include="Assets\Code\Common\Systems\SelfDestructTimerSystem.cs" />
      <Compile Include="Assets\Code\Common\Entity\ToStrings\INamedEntity.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Hero\Systems\HeroDeathSystem.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\EntityDependant.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameReadyToCollectTargetsComponent.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\Registrars\EntityComponentRegistrar.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Code\Common" />
@@ -201,6 +210,7 @@
      <Folder Include="Assets\Code\Gameplay\Features\Lifetime" />
      <Folder Include="Assets\Code\Gameplay\Input\Systems" />
      <Folder Include="Assets\Code\Gameplay\Cameras" />
+     <Folder Include="Assets\Code\Gameplay\Features\Lifetime\Systems" />
      <Folder Include="Assets\Project\Sprites\Player" />
      <Folder Include="Assets\Code\Gameplay\Features\DamageApplication\Systems" />
      <Folder Include="Assets\Code\Infrastructure" />
@@ -210,6 +220,7 @@
      <Folder Include="Assets\Code\Generated" />
      <Folder Include="Assets\Code\Gameplay\Features\Movement\Systems" />
      <Folder Include="Assets\Sherlog" />
+     <Folder Include="Assets\Code\Gameplay\Features\Enemy\Systems" />
      <Folder Include="Assets\Code\Generated\Game\Components" />
      <Folder Include="Assets\Code\Gameplay\Features\Hero\Systems" />
      <Folder Include="Assets\Code\Gameplay\Input" />

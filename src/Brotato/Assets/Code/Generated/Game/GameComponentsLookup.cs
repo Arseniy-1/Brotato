@@ -24,21 +24,24 @@ public static class GameComponentsLookup {
     public const int Hero = 13;
     public const int HeroAnimator = 14;
     public const int CurentHP = 15;
-    public const int MaxHP = 16;
-    public const int Direction = 17;
-    public const int Moving = 18;
-    public const int Speed = 19;
-    public const int TurnedAlongDirection = 20;
-    public const int CollectTargetsInterval = 21;
-    public const int CollectTargetsTimer = 22;
-    public const int LayerMask = 23;
-    public const int Radius = 24;
-    public const int ReadyToCollectTargets = 25;
-    public const int TargetsBuffer = 26;
-    public const int AxisInput = 27;
-    public const int Input = 28;
+    public const int Dead = 16;
+    public const int MaxHP = 17;
+    public const int ProcessingDeath = 18;
+    public const int Direction = 19;
+    public const int MovementAvailable = 20;
+    public const int Moving = 21;
+    public const int Speed = 22;
+    public const int TurnedAlongDirection = 23;
+    public const int CollectTargetsInterval = 24;
+    public const int CollectTargetsTimer = 25;
+    public const int LayerMask = 26;
+    public const int Radius = 27;
+    public const int ReadyToCollectTargets = 28;
+    public const int TargetsBuffer = 29;
+    public const int AxisInput = 30;
+    public const int Input = 31;
 
-    public const int TotalComponents = 29;
+    public const int TotalComponents = 32;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -57,8 +60,11 @@ public static class GameComponentsLookup {
         "Hero",
         "HeroAnimator",
         "CurentHP",
+        "Dead",
         "MaxHP",
+        "ProcessingDeath",
         "Direction",
+        "MovementAvailable",
         "Moving",
         "Speed",
         "TurnedAlongDirection",
@@ -89,8 +95,11 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Hero.Hero),
         typeof(Code.Gameplay.Features.Hero.HeroAnimatorComponent),
         typeof(Code.Gameplay.Features.Lifetime.CurentHP),
+        typeof(Code.Gameplay.Features.Lifetime.Dead),
         typeof(Code.Gameplay.Features.Lifetime.MaxHP),
+        typeof(Code.Gameplay.Features.Lifetime.ProcessingDeath),
         typeof(Code.Gameplay.Features.Movement.Direction),
+        typeof(Code.Gameplay.Features.Movement.MovementAvailable),
         typeof(Code.Gameplay.Features.Movement.Moving),
         typeof(Code.Gameplay.Features.Movement.Speed),
         typeof(Code.Gameplay.Features.Movement.TurnedAlongDirection),

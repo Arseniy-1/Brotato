@@ -21,7 +21,7 @@ namespace Code.Gameplay.Features.Enemy.Behaviours
 
         public void PlayAttack() => Animator.SetTrigger(_attackHash);
 
-        public void PlayDied() => Animator.SetTrigger(_diedHash);
+        public void PlayDied() => Animator.Play(_diedHash);
 
         public void PlayDamageTaken()
         {

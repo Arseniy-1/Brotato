@@ -1,6 +1,6 @@
 using Entitas;
 
-namespace Code.Gameplay.Features.Enemy.Registrar
+namespace Code.Gameplay.Features.Enemy.Systems
 {
     public class ChaseHeroSystem : IExecuteSystem
     {
@@ -13,14 +13,13 @@ namespace Code.Gameplay.Features.Enemy.Registrar
                 .AllOf(
                     GameMatcher.Enemy,
                     GameMatcher.WorldPosition));
-            
+
             _heroes = gameContext.GetGroup(GameMatcher
                 .AllOf(
                     GameMatcher.Hero,
                     GameMatcher.WorldPosition));
-
         }
-        
+
         public void Execute()
         {
             foreach (GameEntity hero in _heroes)

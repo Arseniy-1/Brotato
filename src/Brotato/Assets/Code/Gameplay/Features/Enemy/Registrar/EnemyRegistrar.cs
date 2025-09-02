@@ -26,6 +26,7 @@ namespace Code.Gameplay.Features.Enemy.Registrar
                 .AddCollectTargetsTimer(0)
                 .AddLayerMask(CollisionLayer.Hero.AsMask())
                 .With(x => x.isEnemy = true)
+                .With(x => x.isMovementAvailable = true)
                 .With(x => x.isTurnedAlongDirection = true);
         }
 
