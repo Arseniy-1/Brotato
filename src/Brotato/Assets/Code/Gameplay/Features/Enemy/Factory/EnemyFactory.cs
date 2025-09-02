@@ -30,6 +30,7 @@ namespace Code.Gameplay.Features.Enemy.Factory
                 .AddTargetsBuffer(new List<int>(1))
                 .AddCollectTargetsInterval(0.5f)
                 .AddCollectTargetsTimer(0)
+                .AddViewPath("Prefabs/BabyAlient")
                 .AddLayerMask(CollisionLayer.Hero.AsMask())
                 .With(x => x.isEnemy = true)
                 .With(x => x.isMovementAvailable = true)

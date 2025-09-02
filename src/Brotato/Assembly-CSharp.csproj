@@ -85,6 +85,7 @@
      <Compile Include="Assets\Code\Gameplay\Features\Lifetime\Systems\MarkDeadSystem.cs" />
      <Compile Include="Assets\Code\Common\Systems\CleanupGameDestructedSystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameDeadComponent.cs" />
+     <Compile Include="Assets\Code\Gameplay\Common\GameplayConstants.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameEnemyComponent.cs" />
      <Compile Include="Assets\Code\Generated\Contexts.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameAxisInputComponent.cs" />
@@ -115,10 +116,12 @@
      <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\CollectTargetFeature.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Systems\AnimateHeroMoveSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\MoveByDirectionSystem.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enemy\Systems\EnemySpawnSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\DirectionalDeltaMoveSystem.cs" />
      <Compile Include="Assets\Code\Generated\Meta\MetaMatcher.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputContext.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Enemy\Behaviours\EnemyAnimator.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enemy\Systems\InitializeSpawnTimeSystem.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputComponentsLookup.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Factory\HeroFactory.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Registrars\HeroAnimatorRegistrar.cs" />
