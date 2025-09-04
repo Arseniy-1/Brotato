@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 12214796845200006}
   - component: {fileID: 3753019404289468142}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2690986477361899998}
   - component: {fileID: 3294890602514411197}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 2100282216928544325}
   - component: {fileID: 2570073796828248922}
   - component: {fileID: 1274663690071212141}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BabyAlient
   m_TagString: Untagged
   m_Icon: {fileID: 0}

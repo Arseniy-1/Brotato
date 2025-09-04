@@ -1,5 +1,4 @@
-﻿using Code.Infrastructure.View;
-using Entitas;
+﻿using Entitas;
 using Entitas.CodeGeneration.Attributes;
 using UnityEngine;
 
