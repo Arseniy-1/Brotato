@@ -1,5 +1,6 @@
 ﻿using Code.Common;
 using Code.Gameplay.Features.Abilities;
+using Code.Gameplay.Features.Armaments;
 using Code.Gameplay.Features.DamageApplication;
 using Code.Gameplay.Features.Enemy;
 using Code.Gameplay.Features.Hero;
@@ -25,6 +26,7 @@ namespace Code.Gameplay
             
             Add(systemFactory.Create<MovementFeature>());
             Add(systemFactory.Create<AbilityFeature>());
+            Add(systemFactory.Create<ArmamentFeature>());
             
             Add(systemFactory.Create<CollectTargetFeature>());
             Add(systemFactory.Create<DamageApplicationFeature>());

@@ -78,11 +78,13 @@
      <Compile Include="Assets\Code\Generated\Game\Components\GameTargetLimitComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameIdComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameWorldPositionComponent.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameProcessedComponent.cs" />
      <Compile Include="Assets\Code\Common\Extensions\TransformExtensions.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\BindEntityViewFromPathSystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameCooldownUpComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Collisions\ICollisionRegistry.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\EntityViewFactory.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Armaments\ArmamentFeature.cs" />
      <Compile Include="Assets\Code\Gameplay\Cameras\Provider\ICameraProvider.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameViewPrefabComponent.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\BindEntityViewFromPrefabSystem.cs" />
@@ -105,6 +107,7 @@
      <Compile Include="Assets\Code\Generated\Meta\MetaContext.cs" />
      <Compile Include="Assets\Code\Infrastructure\AssetManagement\IAssetProvider.cs" />
      <Compile Include="Assets\Code\Common\Entity\CreateMetaEntity.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Armaments\MarkProcessedOnTargetLimitExceededSystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameTurnedAlongDirectionComponent.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\EntityBehaviour.cs" />
      <Compile Include="Assets\Code\Infrastructure\Identifiers\IIdentifierService.cs" />
@@ -141,6 +144,7 @@
      <Compile Include="Assets\Code\Common\Extensions\CollisionExtensions.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameDirectionComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameViewPathComponent.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameRotationAlignedAlongDirectionComponent.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\BindViewFeature.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Time\UnityTimeService.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Enemy\EnemyTypeId.cs" />
@@ -158,6 +162,7 @@
      <Compile Include="Assets\Code\Infrastructure\Systems\SystemFactory.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Abilities\Factory\IAbilityFactory.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameSpriteRendererComponent.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\RotateAlongDirectionSystem.cs" />
      <Compile Include="Assets\Code\Common\Entity\ToStrings\InputEntity.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Collisions\CollisionRegistry.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputMatcher.cs" />
@@ -186,6 +191,7 @@
      <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\Systems\CastForTargetsNoLimitSystem.cs" />
      <Compile Include="Assets\Code\Common\Entity\ToStrings\EntityPrinter.cs" />
      <Compile Include="Assets\Code\Generated\Meta\MetaComponentsLookup.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Armaments\FinalizeProcessedArmamentSystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameSpeedComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameMovingComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameCollectTargetsTimerComponent.cs" />
