@@ -11,7 +11,7 @@ namespace Code.Gameplay.Features.Hero.Systems
         public FinalizeHeroDeathProcessingSystem(GameContext gameContext)
         {
             _heroes = gameContext.GetGroup(GameMatcher
-                .AllOf(GameMatcher.Enemy,
+                .AllOf(GameMatcher.Hero,
                     GameMatcher.ProcessingDeath,
                     GameMatcher.Dead));
         }

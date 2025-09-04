@@ -19,13 +19,13 @@ namespace Code.Gameplay.Features.TargetCollection.Systems
             _physicsService = physicsService;
             _entities = gameContext.GetGroup(GameMatcher
                 .AllOf(
-                    GameMatcher.TargetsBuffer,
-                    GameMatcher.TargetLimit,
                     GameMatcher.ReadyToCollectTargets,
+                    GameMatcher.Radius,
+                    GameMatcher.TargetsBuffer,
                     GameMatcher.ProcessedTargets,
+                    GameMatcher.TargetLimit,
                     GameMatcher.WorldPosition,
-                    GameMatcher.LayerMask,
-                    GameMatcher.Radius));
+                    GameMatcher.LayerMask));    
         }
 
         public void Execute()

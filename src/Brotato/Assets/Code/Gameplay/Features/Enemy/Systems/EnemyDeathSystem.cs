@@ -1,6 +1,5 @@
 using Code.Gameplay.Features.TargetCollection;
 using Entitas;
-using UnityEngine;
 
 namespace Code.Gameplay.Features.Enemy.Systems
 {
@@ -23,7 +22,6 @@ namespace Code.Gameplay.Features.Enemy.Systems
         {
             foreach (GameEntity enemy in _enemies)
             {
-                Debug.Log("1");
                 enemy.isMovementAvailable = false;
                 enemy.isTurnedAlongDirection = false;
 

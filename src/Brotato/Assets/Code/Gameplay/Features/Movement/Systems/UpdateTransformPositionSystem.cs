@@ -10,7 +10,7 @@ namespace Code.Gameplay.Features.Movement.Systems
         {
             _movers = game.GetGroup(GameMatcher
                 .AllOf(
-                    GameMatcher.Direction,
+                    GameMatcher.Transform,
                     GameMatcher.WorldPosition));
         }
 
