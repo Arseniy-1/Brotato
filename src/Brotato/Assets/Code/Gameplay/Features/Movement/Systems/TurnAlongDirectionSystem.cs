@@ -20,7 +20,7 @@ namespace Code.Gameplay.Features.Movement.Systems
         public void Execute()
         {
             foreach (GameEntity mover in _movers)
-            {
+            {   
                 float scale = Mathf.Abs(mover.SpriteRenderer.transform.localScale.x);
                 mover.SpriteRenderer.transform.SetScaleX(scale * FaceDirection(mover));
             }

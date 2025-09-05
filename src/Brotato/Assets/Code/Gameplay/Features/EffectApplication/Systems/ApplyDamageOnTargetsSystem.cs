@@ -1,7 +1,6 @@
 using Entitas;
-using UnityEngine;
 
-namespace Code.Gameplay.Features.DamageApplication.Systems
+namespace Code.Gameplay.Features.EffectApplication.Systems
 {
     public class ApplyDamageOnTargetsSystem : IExecuteSystem
     {
@@ -20,19 +19,17 @@ namespace Code.Gameplay.Features.DamageApplication.Systems
         public void Execute()
         {
             foreach (GameEntity damageDealer in _damageDealers)
+            foreach (int targetID in damageDealer.TargetsBuffer)
             {
-                foreach (int targetID in damageDealer.TargetsBuffer)
+                GameEntity target = _gameContext.GetEntityWithId(targetID);
+
+                if (target.hasCurentHP)
                 {
-                    GameEntity target = _gameContext.GetEntityWithId(targetID);
+                    target.ReplaceCurentHP(target.CurentHP - damageDealer.Damage);
 
-                    if (target.hasCurentHP)
+                    if (target.hasDamageTakenAnimator)
                     {
-                        target.ReplaceCurentHP(target.CurentHP - damageDealer.Damage);
-
-                        if (target.hasDamageTakenAnimator)
-                        {
-                            target.DamageTakenAnimator.PlayDamageTaken();
-                        }
+                        target.DamageTakenAnimator.PlayDamageTaken();
                     }
                 }
             }
