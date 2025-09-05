@@ -30,7 +30,9 @@ namespace Code.Gameplay.Features.DamageApplication.Systems
                         target.ReplaceCurentHP(target.CurentHP - damageDealer.Damage);
 
                         if (target.hasDamageTakenAnimator)
+                        {
                             target.DamageTakenAnimator.PlayDamageTaken();
+                        }
                     }
                 }
             }

@@ -1,8 +1,4 @@
-﻿
-using Code.Gameplay;
-using Code.Gameplay.Cameras.Provider;
-using Code.Gameplay.Common.Time;
-using Code.Gameplay.Input.Service;
+﻿using Code.Gameplay;
 using Code.Infrastructure.Systems;
 using UnityEngine;
 using Zenject;

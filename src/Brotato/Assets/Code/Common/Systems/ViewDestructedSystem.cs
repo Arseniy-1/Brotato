@@ -17,10 +17,8 @@ namespace Code.Common.Systems
 
         public void Cleanup()
         {
-            Debug.Log("1");
             foreach (GameEntity entity in _entities)
             {
-                Debug.Log("2");
                 entity.View.ReleaseEntity();
                 Object.Destroy(entity.View.gameObject);
             }
