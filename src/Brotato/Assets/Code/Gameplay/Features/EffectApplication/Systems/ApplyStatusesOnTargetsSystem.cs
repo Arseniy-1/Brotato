@@ -1,20 +1,20 @@
-using Code.Gameplay.Features.Effects;
-using Code.Gameplay.Features.Effects.Factory;
+using Code.Gameplay.Features.Statuses;
+using Code.Gameplay.Features.Statuses.Factory;
 using Entitas;
 
 namespace Code.Gameplay.Features.EffectApplication.Systems
 {
-    public class ApplyEffectsOnTargetsSystem : IExecuteSystem
+    public class ApplyStatusesOnTargetsSystem : IExecuteSystem
     {
-        private readonly EffectsFactory _effectsFactory;
+        private readonly IStatusFactory _statusFactory;
         private readonly IGroup<GameEntity> _entities;
 
-        public ApplyEffectsOnTargetsSystem(GameContext gameContext, EffectsFactory effectsFactory)
+        public ApplyStatusesOnTargetsSystem(GameContext gameContext, IStatusFactory statusFactory)
         {
-            _effectsFactory = effectsFactory;
+            _statusFactory = statusFactory;
             _entities = gameContext.GetGroup(GameMatcher
                 .AllOf(
-                    GameMatcher.EffectSetups,
+                    GameMatcher.StatusSetups,
                     GameMatcher.TargetsBuffer));
         }
 
@@ -22,9 +22,9 @@ namespace Code.Gameplay.Features.EffectApplication.Systems
         {
             foreach (GameEntity entity in _entities)
             foreach (int targetID in entity.TargetsBuffer)
-            foreach (EffectSetup setup in entity.EffectSetups)
+            foreach (StatusSetup setup in entity.StatusSetups)
             {
-                _effectsFactory.CreateEffect(setup, ProducerID(entity), targetID);
+                _statusFactory.CreateStatus(setup, ProducerID(entity), targetID);
             }
         }
 

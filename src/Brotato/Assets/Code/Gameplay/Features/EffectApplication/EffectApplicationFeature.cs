@@ -1,13 +1,14 @@
 using Code.Gameplay.Features.EffectApplication.Systems;
 using Code.Infrastructure.Systems;
 
-namespace Code.Gameplay.Features.DamageApplication
+namespace Code.Gameplay.Features.EffectApplication
 {
     public class EffectApplicationFeature : Feature
     {
         public EffectApplicationFeature(ISystemFactory systemFactory)
         {
             Add(systemFactory.Create<ApplyDamageOnTargetsSystem>());
+            Add(systemFactory.Create<ApplyStatusesOnTargetsSystem>());
         }
     }
 }

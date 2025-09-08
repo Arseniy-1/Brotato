@@ -14,6 +14,18 @@ namespace Code.Gameplay.Features.Effects.Factory
             _identifierService = identifierService;
         }
 
+        private void CreateDamage(int producerId, int targetId, float value)
+        {
+            CreateEntity
+                .Empty()
+                .AddId(_identifierService.Next())
+                .With(x => x.isEffect = true)
+                .With(x => x.isDamageEffect = true)
+                .AddEffectValue(value)
+                .AddProducerId(producerId)
+                .AddTargetId(targetId);
+        }
+
         public GameEntity CreateEffect(EffectSetup effectSetup, int producerId, int targetId)
         {
             switch (effectSetup.EffectTypeId)
@@ -26,18 +38,6 @@ namespace Code.Gameplay.Features.Effects.Factory
             }
 
             throw new Exception($"Effect with type id {effectSetup.EffectTypeId} is not supported");
-        }
-
-        private void CreateDamage(int producerId, int targetId, float value)
-        {
-            CreateEntity
-                .Empty()
-                .AddId(_identifierService.Next())
-                .With(x => x.isEffect = true)
-                .With(x => x.isDamageEffect = true)
-                .AddEffectValue(value)
-                .AddProducerId(producerId)
-                .AddTargetId(targetId);
         }
     }
 }
