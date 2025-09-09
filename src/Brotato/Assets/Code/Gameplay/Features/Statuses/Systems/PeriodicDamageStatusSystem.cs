@@ -36,8 +36,9 @@ namespace Code.Gameplay.Features.Statuses.Systems
                 else
                 {
                     status.ReplaceTimeSinceLastTick(status.Period);
-                    
-                    _effectsFactory.CreateEffect(new EffectSetup { EffectTypeId = EffectTypeId.Damage, Value = status.EffectValue },
+
+                    _effectsFactory.CreateEffect(
+                        new EffectSetup { EffectTypeId = EffectTypeId.Damage, Value = status.EffectValue },
                         status.ProducerId,
                         status.TargetId);
                 }

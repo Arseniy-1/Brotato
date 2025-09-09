@@ -2,8 +2,9 @@ using System.Linq;
 using Code.Common.EntityIndices;
 using Code.Common.Extensions;
 using Code.Gameplay.Features.Statuses.Factory;
+using Code.Gameplay.Features.Statuses.Systems;
 
-namespace Code.Gameplay.Features.Statuses.Systems
+namespace Code.Gameplay.Features.Statuses.Applier
 {
     public class StatusApplier : IStatusApplier
     {

@@ -1,3 +1,5 @@
+using Code.Gameplay.Features.CharacterStats;
+using Code.Gameplay.Features.CharacterStats.Indexing;
 using Code.Gameplay.Features.Effects;
 using Code.Gameplay.Features.Statuses;
 using Code.Gameplay.Features.Statuses.Indexing;
@@ -11,6 +13,7 @@ namespace Code.Common.EntityIndices
         private readonly GameContext _gameContext;
 
         public const string StatusesOfType = "StatusesOfType";
+        public const string StatChanges = "StatChanges";
         
         public GameEntityIndices(GameContext gameContext)
         {
@@ -30,6 +33,22 @@ namespace Code.Common.EntityIndices
                         GameMatcher.TargetId)),
                 getKey: GetTargetStatusKey, 
                 new StatusKeyEqualityComparer()));
+            
+            _gameContext.AddEntityIndex(new EntityIndex<GameEntity, StatKey>(
+                name: StatChanges,
+                _gameContext.GetGroup(GameMatcher
+                    .AllOf(
+                        GameMatcher.StatChange,
+                        GameMatcher.TargetId)),
+                getKey: GetTargetStatKey, 
+                new StatKeyEqualityComparer()));
+        }
+
+        private StatKey GetTargetStatKey(GameEntity entity, IComponent component)
+        {
+            return new StatKey(
+                (component as TargetId)?.Value ?? entity.TargetId,
+                (component as StatChange)?.Value ?? entity.StatChange);
         }
 
         private StatusKey GetTargetStatusKey(GameEntity entity, IComponent component)

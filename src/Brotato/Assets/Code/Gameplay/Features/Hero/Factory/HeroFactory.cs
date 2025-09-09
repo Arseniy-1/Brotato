@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using Code.Common.Entity;
 using Code.Common.Extensions;
+using Code.Gameplay.Features.CharacterStats;
 using Code.Infrastructure.Identifiers;
 using UnityEngine;
 
@@ -16,13 +18,19 @@ namespace Code.Gameplay.Features.Hero.Factory
 
         public GameEntity CreateHero(Vector3 at)
         {
+            Dictionary<Stats, float> baseStats = InitStats.EmptyStatDictionary()
+                .With(x => x[Stats.Speed] = 1)
+                .With(x => x[Stats.MaxHp] = 100);
+            
             return CreateEntity.Empty()
                 .AddId(_identifiers.Next())
                 .AddWorldPosition(at)
                 .AddDirection(Vector3.zero)
-                .AddSpeed(2)
-                .AddCurentHP(100)
-                .AddMaxHP(100)
+                .AddBaseStats(baseStats)
+                .AddStatModifiers(InitStats.EmptyStatDictionary())
+                .AddSpeed(baseStats[Stats.Speed])
+                .AddCurentHP(baseStats[Stats.MaxHp])
+                .AddMaxHP(baseStats[Stats.MaxHp])
                 .AddViewPath("Prefabs/Player")
                 .With(x => x.isHero = true)
                 .With(x => x.isMovementAvailable = true)

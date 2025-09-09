@@ -1,5 +1,3 @@
-using System.Collections;
-
 namespace Code.Gameplay.Features.Statuses.Indexing
 {
     public struct StatusKey

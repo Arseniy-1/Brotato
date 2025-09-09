@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Code\Gameplay\Features\Cooldowns\CooldownEntityExtensions.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameAffectedComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\TargetCollectionEntityExtensions.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameMovementAvailableComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameCurentHPComponent.cs" />
@@ -61,6 +62,8 @@
      <Compile Include="Assets\Code\Generated\Game\GameEntity.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\EffectApplication\Systems\ApplyStatusesOnTargetsSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Physics\PhysicsService.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\PeriodicDamageStatusSystem.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Statuses\Applier\StatusApplier.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameArmamentComponent.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputAttribute.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Systems\SetHeroDirectionByInputSystem.cs" />
@@ -100,16 +103,23 @@
      <Compile Include="Assets\Code\Gameplay\Cameras\Provider\ICameraProvider.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\EffectApplication\Systems\ApplyEffectsOnTargetsSystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameViewPrefabComponent.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\CharacterStats\Indexing\StatKey.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameStatChangeComponent.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\BindEntityViewFromPrefabSystem.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\CharacterStats\Stats.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\CharacterStats\InitStats.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Armaments\ArmamentComponents.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\CharacterStats\StatsFeature.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\IEntityView.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameStatusComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Armaments\Factory\ArmamentsFactory.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\StatusVisuals\UnapplyPoisonVisualSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Effects\EffectTypeId.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Effects\EffectFeature.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameStatModifiersComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Input\Systems\EmitInputSystem.cs" />
      <Compile Include="Assets\Code\Infrastructure\Systems\ISystemFactory.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\CharacterStats\StatsComponents.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\Indexing\StatusKeyEqualityComparer.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\EffectApplication\Systems\ApplyDamageOnTargetsSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Lifetime\Systems\MarkDeadSystem.cs" />
@@ -129,6 +139,7 @@
      <Compile Include="Assets\Code\Generated\Game\Components\GameDurationComponent.cs" />
      <Compile Include="Assets\Code\Infrastructure\AssetManagement\IAssetProvider.cs" />
      <Compile Include="Assets\Code\Common\Entity\CreateMetaEntity.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\CleanupUnappliedStatusLinkedChanges.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Armaments\MarkProcessedOnTargetLimitExceededSystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameTurnedAlongDirectionComponent.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\EntityBehaviour.cs" />
@@ -136,12 +147,12 @@
      <Compile Include="Assets\Code\Infrastructure\Identifiers\IIdentifierService.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\Registrars\IEntityComponentRegistrar.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\StatusVisualsFeature.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameFreezeComponent.cs" />
      <Compile Include="Assets\Code\Common\Registrars\SpriteRendererRegistrar.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\StatusSetup.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\IDamageTakenAnimator.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Enemy\Registrar\EnemyAnimatorRegistrar.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Enemy\Systems\EnemyDeathSystem.cs" />
-     <Compile Include="Assets\Code\Gameplay\Features\Statuses\Applier\PeriodicDamageStatusSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\Systems\CastForTargetsWithLimitSystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\GameMatcher.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Behaviours\HeroAnimator.cs" />
@@ -151,12 +162,14 @@
      <Compile Include="Assets\Code\Generated\Game\Components\GameSelfDestructTimerComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Cooldowns\CooldownComponents.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameTimeSinceLastTickComponent.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\StatusVisuals\ApplyFreezeVisualSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Cameras\Provider\CameraProvider.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Enemy\Systems\ChaseHeroSystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameTimeLeftComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameProcessedTargetsComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameTargetsBufferComponent.cs" />
      <Compile Include="Assets\Code\Infrastructure\Identifiers\IdentifierService.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\ApplyFreezeStatusSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\CollectTargetFeature.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Systems\AnimateHeroMoveSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\MoveByDirectionSystem.cs" />
@@ -165,6 +178,7 @@
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\DirectionalDeltaMoveSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\StaticData\StaticDataService.cs" />
      <Compile Include="Assets\Code\Generated\Meta\MetaMatcher.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\CharacterStats\Systems\ApplySpeedFromStatsSystem.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputContext.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Enemy\Behaviours\EnemyAnimator.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Effects\Systems\RemoveEffectsWithoutTargetSystem.cs" />
@@ -174,12 +188,12 @@
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Registrars\HeroAnimatorRegistrar.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\StatusVisuals\StatusVisualsRegistrar.cs" />
      <Compile Include="Assets\Code\Common\Extensions\CollisionExtensions.cs" />
-     <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\StatusApplier.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameDirectionComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameViewPathComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameRotationAlignedAlongDirectionComponent.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\BindViewFeature.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Time\UnityTimeService.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\CharacterStats\Systems\StatsChangeSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Enemy\EnemyTypeId.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\StatusVisuals\ApplyPoisonVisualSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Effects\EffectComponents.cs" />
@@ -193,6 +207,7 @@
      <Compile Include="Assets\Code\Gameplay\Input\Service\StandaloneInputService.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameEffectComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\GameContext.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\CharacterStats\Indexing\StatKeyEqualityComparer.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameMaxHPComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Physics\IPhysicsService.cs" />
      <Compile Include="Assets\Code\Common\Entity\ToStrings\GameEntity.cs" />
@@ -202,6 +217,7 @@
      <Compile Include="Assets\Code\Gameplay\Features\Effects\EffectSetup.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\StatusTypeId.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameSpriteRendererComponent.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameApplierStatusLinkComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\RotateAlongDirectionSystem.cs" />
      <Compile Include="Assets\Code\Common\Entity\ToStrings\InputEntity.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Collisions\CollisionRegistry.cs" />
@@ -214,6 +230,7 @@
      <Compile Include="Assets\Code\Generated\Game\Components\GameCollectTargetsIntervalComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\Factory\IStatusFactory.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\TurnAlongDirectionSystem.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameBaseStatsComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Abilities\Configs\AbilityLevel.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameLayerMaskComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameAbilityIDComponent.cs" />
@@ -232,6 +249,7 @@
      <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\Systems\CastForTargetsNoLimitSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\Indexing\StatusKey.cs" />
      <Compile Include="Assets\Code\Common\Entity\ToStrings\EntityPrinter.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\StatusVisuals\UnapplyFreezeVisualSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\Factory\StatusFactory.cs" />
      <Compile Include="Assets\Code\Generated\Meta\MetaComponentsLookup.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Armaments\FinalizeProcessedArmamentSystem.cs" />
@@ -288,6 +306,7 @@
      <Folder Include="Assets\Code\Gameplay\Features\Hero" />
      <Folder Include="Assets\Code\Generated\Input" />
      <Folder Include="Assets\Code\Common\Extensions" />
+     <Folder Include="Assets\Code\Gameplay\Features\CharacterStats" />
      <Folder Include="Assets\Entitas\Sherlog" />
      <Folder Include="Assets\Code\Common\Entity\ToStrings" />
      <Folder Include="Assets\Entitas\Entitas" />
@@ -342,6 +361,7 @@
      <Folder Include="Assets\Code\Infrastructure\View" />
      <Folder Include="Assets\Resources\Sprites\Tiles\DesertPallete" />
      <Folder Include="Assets\Resources\Sprites\Tiles" />
+     <Folder Include="Assets\Code\Gameplay\Features\CharacterStats\Systems" />
      <Folder Include="Assets\Code\Gameplay\Common\Collisions" />
      <Folder Include="Assets\Code\Common\EntityIndices" />
      <Folder Include="Assets\Resources" />
@@ -377,6 +397,7 @@
      <Folder Include="Assets\Code\Gameplay\Features\EffectApplication" />
      <Folder Include="Assets\Code\Gameplay\Cameras\Systems" />
      <Folder Include="Assets\Resources\Sprites\UI" />
+     <Folder Include="Assets\Code\Gameplay\Features\CharacterStats\Indexing" />
      <Folder Include="Assets\Code\Gameplay\Features\Cooldowns\Systems" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
