@@ -1,4 +1,5 @@
-﻿using Entitas;
+﻿using Code.Gameplay.Common.StatusVisuals;
+using Entitas;
 using Entitas.CodeGeneration.Attributes;
 using UnityEngine;
 
@@ -10,4 +11,5 @@ namespace Code.Gameplay.Common
      [Game] public class SpriteRendererComponent : IComponent { public SpriteRenderer Value; }
      [Game] public class DamageTakenAnimatorComponent : IComponent { public IDamageTakenAnimator Value; }
      [Game] public class Damage : IComponent { public float Value; }
+     [Game] public class StatusVisualsComponent : IComponent { public IStatusVisuals Value; }
 } 

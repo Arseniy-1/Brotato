@@ -1,17 +1,18 @@
 using Code.Gameplay.Features.Statuses;
 using Code.Gameplay.Features.Statuses.Factory;
+using Code.Gameplay.Features.Statuses.Systems;
 using Entitas;
 
 namespace Code.Gameplay.Features.EffectApplication.Systems
 {
     public class ApplyStatusesOnTargetsSystem : IExecuteSystem
     {
-        private readonly IStatusFactory _statusFactory;
+        private readonly IStatusApplier _statusApplier;
         private readonly IGroup<GameEntity> _entities;
 
-        public ApplyStatusesOnTargetsSystem(GameContext gameContext, IStatusFactory statusFactory)
+        public ApplyStatusesOnTargetsSystem(GameContext gameContext, IStatusApplier statusApplier)
         {
-            _statusFactory = statusFactory;
+            _statusApplier = statusApplier;
             _entities = gameContext.GetGroup(GameMatcher
                 .AllOf(
                     GameMatcher.StatusSetups,
@@ -24,7 +25,7 @@ namespace Code.Gameplay.Features.EffectApplication.Systems
             foreach (int targetID in entity.TargetsBuffer)
             foreach (StatusSetup setup in entity.StatusSetups)
             {
-                _statusFactory.CreateStatus(setup, ProducerID(entity), targetID);
+                _statusApplier.ApplyStatus(setup, ProducerID(entity), targetID);
             }
         }
 

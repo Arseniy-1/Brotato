@@ -6,7 +6,7 @@ namespace Code.Gameplay.Features.Statuses.Systems
     public class CleanupUnappliedStatusesSystem : ICleanupSystem
     {
         private readonly IGroup<GameEntity> _statuses;
-        private readonly List<GameEntity> _buffer;
+        private readonly List<GameEntity> _buffer = new(32);
 
         public CleanupUnappliedStatusesSystem(GameContext gameContext)
         {

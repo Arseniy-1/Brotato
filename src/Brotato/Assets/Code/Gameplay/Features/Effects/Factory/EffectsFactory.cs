@@ -14,9 +14,9 @@ namespace Code.Gameplay.Features.Effects.Factory
             _identifierService = identifierService;
         }
 
-        private void CreateDamage(int producerId, int targetId, float value)
+        private GameEntity CreateDamage(int producerId, int targetId, float value)
         {
-            CreateEntity
+            return CreateEntity
                 .Empty()
                 .AddId(_identifierService.Next())
                 .With(x => x.isEffect = true)
@@ -33,8 +33,7 @@ namespace Code.Gameplay.Features.Effects.Factory
                 case EffectTypeId.Unknown:
                     break;
                 case EffectTypeId.Damage:
-                    CreateDamage(producerId, targetId, effectSetup.Value);
-                    break;
+                    return CreateDamage(producerId, targetId, effectSetup.Value);
             }
 
             throw new Exception($"Effect with type id {effectSetup.EffectTypeId} is not supported");
