@@ -1,4 +1,4 @@
-using Code.Gameplay.Features.Abilities.PenetratorBoltAbilitySystems;
+using Code.Gameplay.Features.Abilities.Systems;
 using Code.Gameplay.Features.Cooldowns.Systems;
 using Code.Infrastructure.Systems;
 
@@ -10,6 +10,7 @@ namespace Code.Gameplay.Features.Abilities
         {
             Add(systemFactory.Create<CooldownSystem>());
             Add(systemFactory.Create<PenetratorBoltAbilitySystem>());
+            Add(systemFactory.Create<OrbitalAbilitySystem>());
         }
     }
 }

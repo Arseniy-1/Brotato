@@ -1,5 +1,4 @@
-﻿using Code.Gameplay.Common.Time;
-using Code.Gameplay.Features.Movement.Systems;
+﻿using Code.Gameplay.Features.Movement.Systems;
 using Code.Infrastructure.Systems;
 
 namespace Code.Gameplay.Features.Movement
@@ -8,7 +7,10 @@ namespace Code.Gameplay.Features.Movement
     {
         public MovementFeature(ISystemFactory systemFactory)
         {
-            Add(systemFactory.Create<DirectionalDeltaMoveSystem>());
+            Add(systemFactory.Create<DirectionalDeltaMoveSystem>());    
+            Add(systemFactory.Create<OrbitalDeltaMoveSystem>());
+            Add(systemFactory.Create<OrbitCenterFollowSystem>());
+            
             Add(systemFactory.Create<TurnAlongDirectionSystem>());
             Add(systemFactory.Create<RotateAlongDirectionSystem>());
             Add(systemFactory.Create<UpdateTransformPositionSystem>());

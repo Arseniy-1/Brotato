@@ -26,7 +26,6 @@ namespace Code.Gameplay.Features.Hero.Behaviours
 
         public void PlayDamageTaken()
         {
-            Debug.Log("123");
             Animator.Play(_damageTakenHash);
         }
 

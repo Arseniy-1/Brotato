@@ -10,7 +10,6 @@ namespace Code.Gameplay.Features.Statuses.Systems.StatusVisuals
         {
         }
 
-
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context) =>
             context.CreateCollector(GameMatcher.Freeze.Added());
 

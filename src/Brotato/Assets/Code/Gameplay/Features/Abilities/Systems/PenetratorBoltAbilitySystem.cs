@@ -1,14 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using Code.Common.Extensions;
-using Code.Gameplay.Features.Armaments;
 using Code.Gameplay.Features.Armaments.Factory;
 using Code.Gameplay.Features.Cooldowns;
 using Code.Gameplay.StaticData;
 using Entitas;
-using UnityEngine;
 
-namespace Code.Gameplay.Features.Abilities.PenetratorBoltAbilitySystems
+namespace Code.Gameplay.Features.Abilities.Systems
 {
     public class PenetratorBoltAbilitySystem : IExecuteSystem
     {

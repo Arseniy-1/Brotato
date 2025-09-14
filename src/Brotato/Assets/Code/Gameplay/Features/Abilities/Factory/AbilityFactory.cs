@@ -32,5 +32,19 @@ namespace Code.Gameplay.Features.Abilities.Factory
                 .With(x => x.isPenetrationBoltAbility = true)
                 .PutOnCooldown();
         }
+        
+        public GameEntity CreateOrbitalAbility(int level)
+        {
+            AbilityLevel abilityLevel = _staticDataService.GetAbilityLevel(AbilityID.Orbital, level);
+
+            return CreateEntity
+                .Empty()
+                .AddId(_identifiers.Next())
+                .AddAbilityID(AbilityID.Orbital) 
+                .AddCooldown(abilityLevel.Cooldown)
+                .AddCooldownLeft(abilityLevel.Cooldown)
+                .With(x => x.isOrbitalAbility = true)
+                .PutOnCooldown();
+        }
     }
 }

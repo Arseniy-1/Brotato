@@ -2,7 +2,6 @@ using Code.Gameplay.Features.Abilities.Factory;
 using Code.Gameplay.Features.Hero.Factory;
 using Code.Gameplay.Levels;
 using Entitas;
-using UnityEngine;
 
 namespace Code.Gameplay.Features.Hero.Systems
 {
@@ -23,6 +22,7 @@ namespace Code.Gameplay.Features.Hero.Systems
         {
             _heroFactory.CreateHero(_levelDataProvider.StartPoint);
             _abilityFactory.CreatePenetratorBoltAbility(level: 1);
+            _abilityFactory.CreateOrbitalAbility(level: 1);
         }
     }
 }

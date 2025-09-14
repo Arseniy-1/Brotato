@@ -25,7 +25,7 @@ namespace Code.Gameplay.Features.Statuses.Systems
                 if (status.TimeLeft >= 0)
                     status.ReplaceTimeLeft(status.TimeLeft - _time.DeltaTime);
                 else
-                    status.isApplied = true;
+                    status.isUnapplied = true;
             }
         }
     }

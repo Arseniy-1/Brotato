@@ -9,8 +9,7 @@ namespace Code.Gameplay.Features.Statuses.Systems.StatusVisuals
         public UnapplyFreezeVisualSystem(GameContext game) : base(game)
         {
         }
-
-
+        
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context) =>
             context.CreateCollector(GameMatcher
                 .AllOf(

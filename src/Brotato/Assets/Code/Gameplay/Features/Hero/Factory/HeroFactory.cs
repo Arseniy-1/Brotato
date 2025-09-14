@@ -19,7 +19,7 @@ namespace Code.Gameplay.Features.Hero.Factory
         public GameEntity CreateHero(Vector3 at)
         {
             Dictionary<Stats, float> baseStats = InitStats.EmptyStatDictionary()
-                .With(x => x[Stats.Speed] = 1)
+                .With(x => x[Stats.Speed] = 2)
                 .With(x => x[Stats.MaxHp] = 100);
             
             return CreateEntity.Empty()
