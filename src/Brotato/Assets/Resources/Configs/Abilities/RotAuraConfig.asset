@@ -10,24 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba20386e3d5548e6a9f804bcc2d5edac, type: 3}
-  m_Name: AbilityConfig
+  m_Name: RotAuraConfig
   m_EditorClassIdentifier: 
-  AbilityID: 1
+  AbilityID: 3
   Levels:
-  - Cooldown: 5
-    ViewPrefab: {fileID: 3464514421686043174, guid: 9306066be8e259744bb2998f69ee6bb0, type: 3}
-    EffectSetups:
-    - EffectTypeId: 1
-      Value: 1
+  - Cooldown: 1
+    ViewPrefab: {fileID: 2316132222704836817, guid: ab15d3ed529fb67449950e793c43d2ad, type: 3}
+    EffectSetups: []
     StatusSetups:
     - StatusTypeId: 2
-      Value: -2
-      Duration: 0.4
+      Value: -5
+      Duration: 0.2
       Period: 0
     ProjectileSetup:
       ProjectileCount: 0
-      Speed: 2
-      Pierce: 3
-      ContactRadius: 0.1
-      Lifetime: 3
+      Speed: 0
+      Pierce: 0
+      ContactRadius: 0
+      Lifetime: 0
       OrbitRadius: 0
+    AuraSetup:
+      Radius: 2
+      Interval: 0.5

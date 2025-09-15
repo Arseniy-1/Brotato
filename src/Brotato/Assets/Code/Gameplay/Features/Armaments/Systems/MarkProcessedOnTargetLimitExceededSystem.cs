@@ -1,5 +1,4 @@
 using Entitas;
-using Unity.VisualScripting;
 
 namespace Code.Gameplay.Features.Armaments
 {

@@ -1,0 +1,9 @@
+using Code.Gameplay.Common.EnchantVisuals;
+using Entitas;
+
+namespace Code.Gameplay.Features.Enchants
+{
+    [Game] public class EnchantTypeIdComponent : IComponent { public EnchantTypeId Value; }
+    [Game] public class EnchantVisualsComponent : IComponent { public IEnchantVisuals Value; }
+    [Game] public class PoisonEnchant : IComponent { }
+} 

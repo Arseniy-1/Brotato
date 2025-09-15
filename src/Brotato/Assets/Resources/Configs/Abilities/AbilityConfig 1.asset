@@ -27,3 +27,6 @@ MonoBehaviour:
       ContactRadius: 0.1
       Lifetime: 3
       OrbitRadius: 1
+    AuraSetup:
+      Radius: 0
+      Interval: 0

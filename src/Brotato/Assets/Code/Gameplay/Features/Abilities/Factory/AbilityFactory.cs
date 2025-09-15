@@ -46,5 +46,14 @@ namespace Code.Gameplay.Features.Abilities.Factory
                 .With(x => x.isOrbitalAbility = true)
                 .PutOnCooldown();
         }
+        
+        public GameEntity CreateRotAuraAbility()
+        {
+            return CreateEntity
+                .Empty()
+                .AddId(_identifiers.Next())
+                .AddAbilityID(AbilityID.RotAura)
+                .With(x => x.isRotAuraAbility = true);
+        }
     }
 }

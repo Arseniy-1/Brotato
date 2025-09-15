@@ -11,6 +11,7 @@ namespace Code.Gameplay.Features.Abilities
             Add(systemFactory.Create<CooldownSystem>());
             Add(systemFactory.Create<PenetratorBoltAbilitySystem>());
             Add(systemFactory.Create<OrbitalAbilitySystem>());
+            Add(systemFactory.Create<RotAuraAbilitySystem>());
         }
     }
 }

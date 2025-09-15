@@ -4,5 +4,6 @@ namespace Code.Gameplay.Features.Abilities.Factory
     {
         GameEntity CreatePenetratorBoltAbility(int level);
         GameEntity CreateOrbitalAbility(int level);
+        GameEntity CreateRotAuraAbility();
     }
 }

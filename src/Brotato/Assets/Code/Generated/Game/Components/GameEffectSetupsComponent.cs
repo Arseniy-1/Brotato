@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Code.Gameplay.Features.Armaments.ArmamentComponents.EffectSetups effectSetups { get { return (Code.Gameplay.Features.Armaments.ArmamentComponents.EffectSetups)GetComponent(GameComponentsLookup.EffectSetups); } }
+    public Code.Gameplay.Features.Armaments.EffectSetups effectSetups { get { return (Code.Gameplay.Features.Armaments.EffectSetups)GetComponent(GameComponentsLookup.EffectSetups); } }
     public System.Collections.Generic.List<Code.Gameplay.Features.Effects.EffectSetup> EffectSetups { get { return effectSetups.Value; } }
     public bool hasEffectSetups { get { return HasComponent(GameComponentsLookup.EffectSetups); } }
 
     public GameEntity AddEffectSetups(System.Collections.Generic.List<Code.Gameplay.Features.Effects.EffectSetup> newValue) {
         var index = GameComponentsLookup.EffectSetups;
-        var component = (Code.Gameplay.Features.Armaments.ArmamentComponents.EffectSetups)CreateComponent(index, typeof(Code.Gameplay.Features.Armaments.ArmamentComponents.EffectSetups));
+        var component = (Code.Gameplay.Features.Armaments.EffectSetups)CreateComponent(index, typeof(Code.Gameplay.Features.Armaments.EffectSetups));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceEffectSetups(System.Collections.Generic.List<Code.Gameplay.Features.Effects.EffectSetup> newValue) {
         var index = GameComponentsLookup.EffectSetups;
-        var component = (Code.Gameplay.Features.Armaments.ArmamentComponents.EffectSetups)CreateComponent(index, typeof(Code.Gameplay.Features.Armaments.ArmamentComponents.EffectSetups));
+        var component = (Code.Gameplay.Features.Armaments.EffectSetups)CreateComponent(index, typeof(Code.Gameplay.Features.Armaments.EffectSetups));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

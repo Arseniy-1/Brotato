@@ -1,4 +1,4 @@
-    using System.Collections.Generic;
+using System.Collections.Generic;
 using Code.Common.Entity;
 using Code.Common.Extensions;
 using Code.Gameplay.Features.Abilities;
@@ -12,7 +12,7 @@ namespace Code.Gameplay.Features.Armaments.Factory
     public class ArmamentsFactory : IArmamentsFactory
     {
         private const int TargetBufferSize = 16;
-        
+
         private readonly IIdentifierService _identifiers;
         private readonly IStaticDataService _staticDataService;
 
@@ -42,7 +42,30 @@ namespace Code.Gameplay.Features.Armaments.Factory
                 .AddOrbitPhase(phase)
                 .AddOrbitRadius(setup.OrbitRadius);
         }
-        
+
+        public GameEntity CreateEffectAura(AbilityID parentAbilityID, int producerId, int level)
+        {
+            AbilityLevel abilityLevel = _staticDataService.GetAbilityLevel(AbilityID.RotAura, level);
+            AuraSetup setup = abilityLevel.AuraSetup;
+
+            return CreateEntity.Empty()
+                .AddId(_identifiers.Next())
+                .AddParentAbility(parentAbilityID)
+                .AddViewPrefab(abilityLevel.ViewPrefab)
+                .With(x => x.AddEffectSetups(abilityLevel.EffectSetups),
+                    when: !abilityLevel.EffectSetups.IsNullOrEmpty())
+                .With(x => x.AddStatusSetups(abilityLevel.StatusSetups),
+                    when: !abilityLevel.StatusSetups.IsNullOrEmpty())
+                .AddRadius(setup.Radius)
+                .AddCollectTargetsInterval(setup.Interval)
+                .AddCollectTargetsTimer(0)
+                .AddLayerMask(CollisionLayer.Enemy.AsMask())
+                .AddTargetsBuffer(new List<int>(TargetBufferSize))
+                .With(x => x.isFollowingProducer = true)
+                .AddWorldPosition(Vector3.zero)
+                .AddProducerId(producerId); 
+        }
+
         private GameEntity CreateProjectileEntity(Vector3 at, AbilityLevel abilityLevel, ProjectileSetup setup)
         {
             return CreateEntity
@@ -51,9 +74,9 @@ namespace Code.Gameplay.Features.Armaments.Factory
                 .AddWorldPosition(at)
                 .AddViewPrefab(abilityLevel.ViewPrefab)
                 .AddSpeed(setup.Speed)
-                .With(x => x.AddEffectSetups(abilityLevel.EffectSetups), when: !abilityLevel.EffectSetups.IsNullOrEmpty()) 
-                .With(x => x.AddStatusSetups(abilityLevel.StatusSetups), when: !abilityLevel.StatusSetups.IsNullOrEmpty()) 
-                .With(x => x.AddTargetLimit(setup.Pierce), when:setup.Pierce > 0)
+                .With(x => x.AddEffectSetups(abilityLevel.EffectSetups), when: !abilityLevel.EffectSetups.IsNullOrEmpty())
+                .With(x => x.AddStatusSetups(abilityLevel.StatusSetups), when: !abilityLevel.StatusSetups.IsNullOrEmpty())
+                .With(x => x.AddTargetLimit(setup.Pierce), when: setup.Pierce > 0)
                 .AddDamage(1)
                 .AddRadius(setup.ContactRadius)
                 .AddTargetsBuffer(new List<int>(TargetBufferSize))
