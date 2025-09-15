@@ -123,6 +123,7 @@
      <Compile Include="Assets\Code\Infrastructure\View\IEntityView.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameStatusComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Armaments\Factory\ArmamentsFactory.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameExplosiveEnchantComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\StatusVisuals\UnapplyPoisonVisualSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Effects\EffectTypeId.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Effects\EffectFeature.cs" />
@@ -272,6 +273,7 @@
      <Compile Include="Assets\Code\Gameplay\Features\Enchants\EnchantConfig.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Enemy\Factory\EnemyFactory.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Armaments\Systems\FollowProducerSystem.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameReachedComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Effects\Systems\ProcessDamageEffectSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\Systems\CastForTargetsNoLimitSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\Indexing\StatusKey.cs" />
@@ -283,6 +285,7 @@
      <Compile Include="Assets\Code\Generated\Game\Components\GameEffectSetupsComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Abilities\Systems\PenetratorBoltAbilitySystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameMovingComponent.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enchants\Systems\ExplosiveEnchantSystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameCollectTargetsTimerComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Enemy\EnemyFeature.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Factory\IHeroFactory.cs" />

@@ -1,6 +1,7 @@
+using System.Collections.Generic;
 using Code.Gameplay.Common.Time;
+using Code.Gameplay.Features.Effects;
 using Entitas;
-using UnityEngine;
 
 namespace Code.Gameplay.Features.TargetCollection.Systems
 {
@@ -33,6 +34,28 @@ namespace Code.Gameplay.Features.TargetCollection.Systems
                     entity.isReadyToCollectTargets = true;
                     entity.ReplaceCollectTargetsTimer(entity.CollectTargetsInterval);
                 }
+            }
+        }
+    }
+
+    public class MarkReachedSystem : IExecuteSystem
+    {
+        private readonly IGroup<GameEntity> _entities;
+        private readonly List<GameEntity> _buffer = new(128);
+
+        public MarkReachedSystem(GameContext gameContext, ITimeService timeService)
+        {
+            _entities = gameContext.GetGroup(GameMatcher
+                .AllOf(GameMatcher.TargetsBuffer)
+                .NoneOf(GameMatcher.Reached));
+        }
+
+        public void Execute()
+        {
+            foreach (GameEntity entity in _entities.GetEntities(_buffer))
+            {
+                if (entity.TargetsBuffer.Count > 0)
+                    entity.isReached = true;
             }
         }
     }

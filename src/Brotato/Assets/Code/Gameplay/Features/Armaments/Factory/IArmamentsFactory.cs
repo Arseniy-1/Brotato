@@ -8,5 +8,6 @@ namespace Code.Gameplay.Features.Armaments.Factory
         GameEntity CreatePenetratorBolt(int level, Vector3 at);
         GameEntity CreateOrbital(int level, Vector3 at, float phase);
         GameEntity CreateEffectAura(AbilityID parentAbilityID, int producerId, int level);
+        GameEntity CreateExplosion(int producerId, Vector3 at);
     }
 }

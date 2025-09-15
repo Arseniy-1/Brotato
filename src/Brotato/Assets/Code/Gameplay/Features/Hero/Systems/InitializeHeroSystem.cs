@@ -29,11 +29,18 @@ namespace Code.Gameplay.Features.Hero.Systems
             _abilityFactory.CreateOrbitalAbility(level: 1);
             _abilityFactory.CreateRotAuraAbility();
 
+            // _statusApplier.ApplyStatus(new StatusSetup()
+            // {
+            //     StatusTypeId = StatusTypeId.PoisonEnchant,
+            //     Duration = 10,
+            // }, hero.Id, hero.Id);
+            //
             _statusApplier.ApplyStatus(new StatusSetup()
             {
-                StatusTypeId = StatusTypeId.PoisonEnchant,
+                StatusTypeId = StatusTypeId.ExplosiveEnchant,
                 Duration = 10,
             }, hero.Id, hero.Id);
+
         }
     }
 }

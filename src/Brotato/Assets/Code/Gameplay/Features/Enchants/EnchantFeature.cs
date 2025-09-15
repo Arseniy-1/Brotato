@@ -8,6 +8,7 @@ namespace Code.Gameplay.Features.Enchants
         public EnchantFeature(ISystemFactory systemFactory)
         {
             Add(systemFactory.Create<PoisonEnchantSystem>());
+            Add(systemFactory.Create<ExplosiveEnchantSystem>());
             Add(systemFactory.Create<ApplyPoisonEnchantVisualsSystem>());
         }
     }
