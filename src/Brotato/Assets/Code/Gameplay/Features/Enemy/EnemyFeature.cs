@@ -12,6 +12,8 @@ namespace Code.Gameplay.Features.Enemy
             Add(systemFactory.Create<ChaseHeroSystem>());
             Add(systemFactory.Create<EnemyDeathSystem>());
             
+            Add(systemFactory.Create<EnemyDropLootSystem>());
+            
             Add(systemFactory.Create<FinalizeEnemyDeathProcessingSystem>());
         }
     }

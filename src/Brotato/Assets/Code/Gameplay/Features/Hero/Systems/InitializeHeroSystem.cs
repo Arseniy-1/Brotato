@@ -40,7 +40,6 @@ namespace Code.Gameplay.Features.Hero.Systems
                 StatusTypeId = StatusTypeId.ExplosiveEnchant,
                 Duration = 10,
             }, hero.Id, hero.Id);
-
         }
     }
 }

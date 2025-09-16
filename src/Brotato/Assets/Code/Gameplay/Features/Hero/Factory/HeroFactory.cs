@@ -31,6 +31,8 @@ namespace Code.Gameplay.Features.Hero.Factory
                 .AddSpeed(baseStats[Stats.Speed])
                 .AddCurentHP(baseStats[Stats.MaxHp])
                 .AddMaxHP(baseStats[Stats.MaxHp])
+                .AddExperience(0)
+                .AddPickupRadius(1)
                 .AddViewPath("Prefabs/Player")
                 .With(x => x.isHero = true)
                 .With(x => x.isMovementAvailable = true)

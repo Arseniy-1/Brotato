@@ -13,6 +13,7 @@ namespace Code.Gameplay.Features.TargetCollection.Systems
         private readonly IGroup<GameEntity> _entities;
         private readonly List<GameEntity> _buffer = new(64);
         private GameEntity[] _targetCastBuffer = new GameEntity[128];
+        private GameEntity[] _hitBuffer = new GameEntity[128];
 
         public CastForTargetsWithLimitSystem(GameContext gameContext, IPhysicsService physicsService)
         {

@@ -81,8 +81,8 @@
      <Compile Include="Assets\Plugins\Zenject\Source\Util\UnityUtil.cs" />
      <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\SubContainerBinder\FactorySubContainerBinder2.cs" />
      <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\Pooling\MemoryPoolInitialSizeBinder.cs" />
-     <Compile Include="Assets\Plugins\Zenject\Source\Install\IInstaller.cs" />
      <Compile Include="Assets\Plugins\Zenject\Source\Binding\Finalizers\PrefabBindingFinalizer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Install\IInstaller.cs" />
      <Compile Include="Assets\Plugins\Zenject\OptionalExtras\SampleGame2 (Advanced)\Scripts\Player\PlayerGui.cs" />
      <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Conventions\ConventionAssemblySelectionBinder.cs" />
      <Compile Include="Assets\Plugins\Zenject\OptionalExtras\Signals\Main\SignalBusInstaller.cs" />
