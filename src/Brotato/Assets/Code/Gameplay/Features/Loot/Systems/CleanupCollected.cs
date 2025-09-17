@@ -15,7 +15,7 @@ namespace Code.Gameplay.Features.Loot.Systems
         {
             foreach (GameEntity pullable in _pullables)
             {
-                // pullable.isDestructed = true;
+                pullable.isDestructed = true;
             }
         }
     }

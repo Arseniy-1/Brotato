@@ -47,6 +47,8 @@
   <ItemGroup>
      <Compile Include="Assets\Code\Gameplay\Features\Cooldowns\CooldownEntityExtensions.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\TargetCollectionEntityExtensions.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enchants\Systems\AddEnchantsToHolderSystem.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameExperienceMeterComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameMovementAvailableComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameCurentHPComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\HeroComponents.cs" />
@@ -106,6 +108,7 @@
      <Compile Include="Assets\Code\Common\Extensions\TransformExtensions.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\BindEntityViewFromPathSystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameCooldownUpComponent.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\LevelUp\Systems\UpdateExperienceMeterSystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameStatusVisualsComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Collisions\ICollisionRegistry.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\EntityViewFactory.cs" />
@@ -143,6 +146,7 @@
      <Compile Include="Assets\Code\Common\Systems\CleanupGameDestructedSystem.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameDeadComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\GameplayConstants.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enchants\UIFactories\IEnchantUIFactory.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\StatusVisuals\StatusVisuals.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameDamageEffectComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameEnemyComponent.cs" />
@@ -184,6 +188,7 @@
      <Compile Include="Assets\Code\Gameplay\Features\Cooldowns\CooldownComponents.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameTimeSinceLastTickComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Abilities\Configs\AuraSetup.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enchants\Systems\RemoveUnappliedEnchantFromHolder.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Loot\Systems\PullTowardsHeroSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\StatusVisuals\ApplyFreezeVisualSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Cameras\Provider\CameraProvider.cs" />
@@ -192,8 +197,10 @@
      <Compile Include="Assets\Code\Generated\Game\Components\GameProcessedTargetsComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameTargetsBufferComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameFollowingProducerComponent.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\LevelUp\Behaviour\ExperienceMeter.cs" />
      <Compile Include="Assets\Code\Infrastructure\Identifiers\IdentifierService.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\ApplyFreezeStatusSystem.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enchants\Registrars\EnchantHolderRegistrar.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Loot\Systems\CleanupCollected.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\CollectTargetFeature.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Enchants\Systems\PoisonEnchantSystem.cs" />
@@ -208,6 +215,7 @@
      <Compile Include="Assets\Code\Gameplay\Features\Enchants\EnchantTypeId.cs" />
      <Compile Include="Assets\Code\Generated\Meta\MetaMatcher.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\CharacterStats\Systems\ApplySpeedFromStatsSystem.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enchants\UIFactories\EnchantUIFactory.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputContext.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Enemy\Behaviours\EnemyAnimator.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Effects\Systems\RemoveEffectsWithoutTargetSystem.cs" />
@@ -250,8 +258,10 @@
      <Compile Include="Assets\Code\Infrastructure\Systems\SystemFactory.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameOrbitalAbilityComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\StatusComponents.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enchants\Behaviours\Enchant.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Abilities\Factory\IAbilityFactory.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Effects\EffectSetup.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\LevelUp\Registrars\ExperienceMeterRegistrar.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\StatusTypeId.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameSpriteRendererComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\EnchantVisuals\EnchantVisuals.cs" />
@@ -259,6 +269,7 @@
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\RotateAlongDirectionSystem.cs" />
      <Compile Include="Assets\Code\Common\Entity\ToStrings\InputEntity.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\Collisions\CollisionRegistry.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\Enchants\Behaviours\EnchantHolder.cs" />
      <Compile Include="Assets\Code\Generated\Input\InputMatcher.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GamePullalbeComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\UpdateTransformPositionSystem.cs" />
@@ -344,6 +355,7 @@
      <Compile Include="Assets\Code\Gameplay\Input\Service\IInputService.cs" />
      <Compile Include="Assets\Code\Common\Systems\SelfDestructTimerSystem.cs" />
      <Compile Include="Assets\Code\Common\Entity\ToStrings\INamedEntity.cs" />
+     <Compile Include="Assets\Code\Generated\Game\Components\GameEnchantHolderComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Hero\Systems\HeroDeathSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Effects\Factory\IEffectsFactory.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Abilities\AbilityComponents.cs" />
@@ -352,6 +364,7 @@
      <Compile Include="Assets\Code\Infrastructure\Installers\SceneInitializationInstaller.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameReadyToCollectTargetsComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\CleanupUnappliedStatusesSystem.cs" />
+     <Compile Include="Assets\Code\Gameplay\Features\LevelUp\LevelUpComponents.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameAffectedComponent.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\Registrars\EntityComponentRegistrar.cs" />
      <Folder Include="Assets" />
@@ -366,6 +379,7 @@
      <Folder Include="Assets\Code\Gameplay\Features\Hero\Behaviours" />
      <Folder Include="Assets\Code\Gameplay\Features\Abilities\Systems" />
      <Folder Include="Assets\Code\Gameplay\Features\Armaments\Factory" />
+     <Folder Include="Assets\Code\Gameplay\Features\LevelUp\Behaviour" />
      <Folder Include="Assets\Code\Gameplay\Features\Loot\Configs" />
      <Folder Include="Assets\Code\Gameplay\Levels" />
      <Folder Include="Assets\TCPeasy" />
@@ -373,6 +387,7 @@
      <Folder Include="Assets\Code\Generated\Meta" />
      <Folder Include="Assets\Entitas" />
      <Folder Include="Assets\Code\Gameplay\Features\Statuses\Factory" />
+     <Folder Include="Assets\Code\Gameplay\Features\LevelUp" />
      <Folder Include="Assets\Resources\Configs\Loot" />
      <Folder Include="Assets\Code\Gameplay\Common" />
      <Folder Include="Assets\Code\Gameplay\Features\Enemy\Registrar" />
@@ -386,6 +401,7 @@
      <Folder Include="Assets\Code\Gameplay\Features\Cooldowns" />
      <Folder Include="Assets\Resources\Sprites\Player\Animations" />
      <Folder Include="Assets\Code\Gameplay\Features\Enemy\Behaviours" />
+     <Folder Include="Assets\Code\Gameplay\Features\Enchants\UIFactories" />
      <Folder Include="Assets\Resources\Sprites\Projectiles\Animations" />
      <Folder Include="Assets\Code\Gameplay\Features" />
      <Folder Include="Assets\Code\Infrastructure\View\Registrars" />
@@ -404,6 +420,7 @@
      <Folder Include="Assets\Code\Infrastructure" />
      <Folder Include="Assets\Code\Generated\Game" />
      <Folder Include="Assets\Code\Gameplay" />
+     <Folder Include="Assets\Code\Gameplay\Features\Enchants\Registrars" />
      <Folder Include="Assets\Code\Common\Registrars" />
      <Folder Include="Assets\Code\Gameplay\Features\Statuses\Applier" />
      <Folder Include="Assets\Code\Generated" />
@@ -423,6 +440,7 @@
      <Folder Include="Assets\Resources\Sprites\Tiles" />
      <Folder Include="Assets\Code\Gameplay\Features\CharacterStats\Systems" />
      <Folder Include="Assets\Code\Gameplay\Features\Armaments\Behaviours" />
+     <Folder Include="Assets\Code\Gameplay\Features\Enchants\Behaviours" />
      <Folder Include="Assets\Code\Gameplay\Common\Collisions" />
      <Folder Include="Assets\Code\Common\EntityIndices" />
      <Folder Include="Assets\Resources" />
@@ -441,10 +459,12 @@
      <Folder Include="Assets\Resources\Sprites\Enemy\Animations" />
      <Folder Include="Assets\Code\Infrastructure\AssetManagement" />
      <Folder Include="Assets\Code\Gameplay\Features\Statuses\Indexing" />
+     <Folder Include="Assets\Code\Gameplay\Features\LevelUp\Registrars" />
      <Folder Include="Assets\Code\Common\Systems" />
      <Folder Include="Assets\Code\Infrastructure\Identifiers" />
      <Folder Include="Assets\Code\Gameplay\Features\Armaments" />
      <Folder Include="Assets\Code" />
+     <Folder Include="Assets\Code\Gameplay\Features\LevelUp\Systems" />
      <Folder Include="Assets\Code\Gameplay\Features\TargetCollection\Systems" />
      <Folder Include="Assets\Code\Gameplay\Features\TargetCollection" />
      <Folder Include="Assets\Entitas\Jenny" />
