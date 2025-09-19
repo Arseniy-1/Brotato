@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AbilityID: 1
   Levels:
-  - Cooldown: 1
+  - Icon: {fileID: 21300000, guid: f43964d6e634d2940981cae154bb2934, type: 3}
+    Description: "\u041F\u0440\u043E\u0431\u0438\u0432\u043A\u0430"
+    Cooldown: 1
     ViewPrefab: {fileID: 1965738476501907382, guid: a6da94f5d40bf164faf67f3d726e22e2, type: 3}
     EffectSetups:
     - EffectTypeId: 1
@@ -56,9 +58,17 @@ MonoBehaviour:
       Value: 0.35
       Duration: 2
       Period: 0.4
+    - StatusTypeId: 1
+      Value: 0.35
+      Duration: 2
+      Period: 0.4
+    - StatusTypeId: 1
+      Value: 0.35
+      Duration: 2
+      Period: 0.4
     ProjectileSetup:
       ProjectileCount: 0
-      Speed: 2
+      Speed: 5
       Pierce: 3
       ContactRadius: 0.1
       Lifetime: 3

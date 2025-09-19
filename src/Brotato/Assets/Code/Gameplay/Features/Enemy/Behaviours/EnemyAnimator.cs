@@ -1,4 +1,5 @@
 using Code.Gameplay.Common;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Code.Gameplay.Features.Enemy.Behaviours
@@ -29,7 +30,15 @@ namespace Code.Gameplay.Features.Enemy.Behaviours
 
         public void PlayDamageTaken()
         {
-            Animator.Play(_damageTakenHash);
+            if (DOTween.IsTweening(Material))
+                return;
+      
+            Material.DOFloat(0.5f, OverlayIntensityProperty, 0.15f)
+                .OnComplete(() =>
+                {
+                    if (SpriteRenderer)
+                        Material.DOFloat(0, OverlayIntensityProperty, 0.15f);
+                });
         }
 
         public void ResetAll()

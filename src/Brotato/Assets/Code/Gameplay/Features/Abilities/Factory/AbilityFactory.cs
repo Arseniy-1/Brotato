@@ -21,38 +21,39 @@ namespace Code.Gameplay.Features.Abilities.Factory
 
         public GameEntity CreatePenetratorBoltAbility(int level)
         {
-            AbilityLevel abilityLevel = _staticDataService.GetAbilityLevel(AbilityID.PenetratorBolt, level);
+            AbilityLevel abilityLevel = _staticDataService.GetAbilityLevel(AbilityId.PenetratorBolt, level);
 
             return CreateEntity
                 .Empty()
-                .AddAbilityID(AbilityID.PenetratorBolt) 
+                .AddAbilityID(AbilityId.PenetratorBolt) 
                 .AddId(_identifiers.Next())
                 .AddCooldown(abilityLevel.Cooldown)
                 .AddCooldownLeft(abilityLevel.Cooldown)
                 .With(x => x.isPenetrationBoltAbility = true)
                 .PutOnCooldown();
         }
-        
+
         public GameEntity CreateOrbitalAbility(int level)
         {
-            AbilityLevel abilityLevel = _staticDataService.GetAbilityLevel(AbilityID.Orbital, level);
-
+            AbilityLevel abilityLevel = _staticDataService.GetAbilityLevel(AbilityId.Orbital, level);
             return CreateEntity
                 .Empty()
                 .AddId(_identifiers.Next())
-                .AddAbilityID(AbilityID.Orbital) 
+                .AddAbilityID(AbilityId.Orbital) 
                 .AddCooldown(abilityLevel.Cooldown)
                 .AddCooldownLeft(abilityLevel.Cooldown)
                 .With(x => x.isOrbitalAbility = true)
+                .With(x => x.isRecreatedOnUpgrade = true)
                 .PutOnCooldown();
         }
-        
+
         public GameEntity CreateRotAuraAbility()
         {
             return CreateEntity
                 .Empty()
                 .AddId(_identifiers.Next())
-                .AddAbilityID(AbilityID.RotAura)
+                .AddAbilityID(AbilityId.RotAura)
+                .With(x => x.isRecreatedOnUpgrade = true)
                 .With(x => x.isRotAuraAbility = true);
         }
     }

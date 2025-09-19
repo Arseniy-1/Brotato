@@ -4,7 +4,7 @@ namespace Code.Gameplay.Common.StatusVisuals
 {
   public class StatusVisualsRegistrar : EntityComponentRegistrar
   {
-    public Common.StatusVisuals.StatusVisuals StatusVisuals;
+    public StatusVisuals StatusVisuals;
     
     public override void RegisterComponents()
     {

@@ -34,10 +34,10 @@ public sealed partial class GameMatcher {
 public partial class GameEntity {
 
     public Code.Gameplay.Features.Abilities.AbilityIDComponent abilityID { get { return (Code.Gameplay.Features.Abilities.AbilityIDComponent)GetComponent(GameComponentsLookup.AbilityID); } }
-    public Code.Gameplay.Features.Abilities.AbilityID AbilityID { get { return abilityID.Value; } }
+    public Code.Gameplay.Features.Abilities.AbilityId AbilityID { get { return abilityID.Value; } }
     public bool hasAbilityID { get { return HasComponent(GameComponentsLookup.AbilityID); } }
 
-    public GameEntity AddAbilityID(Code.Gameplay.Features.Abilities.AbilityID newValue) {
+    public GameEntity AddAbilityID(Code.Gameplay.Features.Abilities.AbilityId newValue) {
         var index = GameComponentsLookup.AbilityID;
         var component = (Code.Gameplay.Features.Abilities.AbilityIDComponent)CreateComponent(index, typeof(Code.Gameplay.Features.Abilities.AbilityIDComponent));
         component.Value = newValue;
@@ -45,7 +45,7 @@ public partial class GameEntity {
         return this;
     }
 
-    public GameEntity ReplaceAbilityID(Code.Gameplay.Features.Abilities.AbilityID newValue) {
+    public GameEntity ReplaceAbilityID(Code.Gameplay.Features.Abilities.AbilityId newValue) {
         var index = GameComponentsLookup.AbilityID;
         var component = (Code.Gameplay.Features.Abilities.AbilityIDComponent)CreateComponent(index, typeof(Code.Gameplay.Features.Abilities.AbilityIDComponent));
         component.Value = newValue;

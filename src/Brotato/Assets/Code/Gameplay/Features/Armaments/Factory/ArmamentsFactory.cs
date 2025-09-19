@@ -25,28 +25,28 @@ namespace Code.Gameplay.Features.Armaments.Factory
 
         public GameEntity CreatePenetratorBolt(int level, Vector3 at)
         {
-            AbilityLevel abilityLevel = _staticDataService.GetAbilityLevel(AbilityID.PenetratorBolt, level);
+            AbilityLevel abilityLevel = _staticDataService.GetAbilityLevel(AbilityId.PenetratorBolt, level);
             ProjectileSetup setup = abilityLevel.ProjectileSetup;
 
             return CreateProjectileEntity(at, abilityLevel, setup)
-                .AddParentAbility(AbilityID.PenetratorBolt)
+                .AddParentAbility(AbilityId.PenetratorBolt)
                 .With(x => x.isRotationAlignedAlongDirection = true);
         }
 
         public GameEntity CreateOrbital(int level, Vector3 at, float phase)
         {
-            AbilityLevel abilityLevel = _staticDataService.GetAbilityLevel(AbilityID.Orbital, level);
+            AbilityLevel abilityLevel = _staticDataService.GetAbilityLevel(AbilityId.Orbital, level);
             ProjectileSetup setup = abilityLevel.ProjectileSetup;
 
             return CreateProjectileEntity(at, abilityLevel, setup)
-                .AddParentAbility(AbilityID.Orbital)
+                .AddParentAbility(AbilityId.Orbital)
                 .AddOrbitPhase(phase)
                 .AddOrbitRadius(setup.OrbitRadius);
         }
 
-        public GameEntity CreateEffectAura(AbilityID parentAbilityID, int producerId, int level)
+        public GameEntity CreateEffectAura(AbilityId parentAbilityID, int producerId, int level)
         {
-            AbilityLevel abilityLevel = _staticDataService.GetAbilityLevel(AbilityID.RotAura, level);
+            AbilityLevel abilityLevel = _staticDataService.GetAbilityLevel(AbilityId.RotAura, level);
             AuraSetup setup = abilityLevel.AuraSetup;
 
             return CreateEntity.Empty()

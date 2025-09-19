@@ -15,8 +15,7 @@ namespace Code.Infrastructure.Installers
         [Inject]
         private void Construct(
             ICameraProvider cameraProvider,
-            ILevelDataProvider levelDataProvider
-        )
+            ILevelDataProvider levelDataProvider)
         {
             _levelDataProvider = levelDataProvider;
             _cameraProvider = cameraProvider;

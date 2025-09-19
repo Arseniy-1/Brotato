@@ -2,13 +2,17 @@ using Code.Common.EntityIndices;
 using Code.Gameplay.Cameras.Provider;
 using Code.Gameplay.Common.Collisions;
 using Code.Gameplay.Common.Physics;
+using Code.Gameplay.Common.Random;
 using Code.Gameplay.Common.Time;
 using Code.Gameplay.Features.Abilities.Factory;
+using Code.Gameplay.Features.Abilities.Upgrade;
 using Code.Gameplay.Features.Armaments.Factory;
 using Code.Gameplay.Features.Effects.Factory;
 using Code.Gameplay.Features.Enchants.UIFactories;
 using Code.Gameplay.Features.Enemy.Factory;
 using Code.Gameplay.Features.Hero.Factory;
+using Code.Gameplay.Features.LevelUp.Services;
+using Code.Gameplay.Features.LevelUp.Windows;
 using Code.Gameplay.Features.Loot.Factory;
 using Code.Gameplay.Features.Statuses.Applier;
 using Code.Gameplay.Features.Statuses.Factory;
@@ -16,6 +20,7 @@ using Code.Gameplay.Features.Statuses.Systems;
 using Code.Gameplay.Input.Service;
 using Code.Gameplay.Levels;
 using Code.Gameplay.StaticData;
+using Code.Gameplay.Windows;
 using Code.Infrastructure.AssetManagement;
 using Code.Infrastructure.Identifiers;
 using Code.Infrastructure.Systems;
@@ -29,12 +34,12 @@ namespace Code.Infrastructure.Installers
     {
         public override void InstallBindings()
         {
-            BindInputService();
+            BindInputServices();
             BindCommonServices();
             BindAssetManagementServices();
             BindCameraProvider();
             BindContexts();
-
+            BindUIServices();
             BindSystemFactory();
             BindUIFactories();
             BindGameplayFactories();
@@ -44,6 +49,8 @@ namespace Code.Infrastructure.Installers
         private void BindUIFactories()
         {
             Container.Bind<IEnchantUIFactory>().To<EnchantUIFactory>().AsSingle();
+            Container.Bind<IWindowFactory>().To<WindowFactory>().AsSingle();
+            Container.Bind<IAbilityUIFactory>().To<AbilityUIFactory>().AsSingle();
         }
 
         private void BindEntityIndices()
@@ -56,9 +63,14 @@ namespace Code.Infrastructure.Installers
             Container.Bind<ISystemFactory>().To<SystemFactory>().AsSingle();
         }
 
-        private void BindInputService()
+        private void BindInputServices()
         {
             Container.Bind<IInputService>().To<StandaloneInputService>().AsSingle();
+        }
+        
+        private void BindUIServices()
+        {
+            Container.Bind<IWindowService>().To<WindowService>().AsSingle();
         }
 
         private void BindCommonServices()
@@ -66,6 +78,7 @@ namespace Code.Infrastructure.Installers
             Container.Bind<ITimeService>().To<UnityTimeService>().AsSingle();
             Container.Bind<ICollisionRegistry>().To<CollisionRegistry>().AsSingle();
             Container.Bind<IPhysicsService>().To<PhysicsService>().AsSingle();
+            Container.Bind<IRandomService>().To<UnityRandomService>().AsSingle();
             Container.Bind<IIdentifierService>().To<IdentifierService>().AsSingle();
             Container.Bind<IStaticDataService>().To<StaticDataService>().AsSingle();
         }
@@ -87,6 +100,8 @@ namespace Code.Infrastructure.Installers
             Container.Bind<IAssetProvider>().To<AssetProvider>().AsSingle();
             Container.Bind<ILevelDataProvider>().To<LevelDataProvider>().AsSingle();
             Container.Bind<IStatusApplier>().To<StatusApplier>().AsSingle();
+            Container.Bind<ILevelUpService>().To<LevelUpService>().AsSingle();
+            Container.Bind<IAbilityUpgradeService>().To<AbilityUpgradeService>().AsSingle();
         }
 
         private void BindCameraProvider()

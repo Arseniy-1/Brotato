@@ -9,6 +9,8 @@ namespace Code.Gameplay.Features.Abilities
         public AbilityFeature(ISystemFactory systemFactory)
         {
             Add(systemFactory.Create<CooldownSystem>());
+            Add(systemFactory.Create<DestroyAbilityEntitiesOnUpgradeSystem>());
+                
             Add(systemFactory.Create<PenetratorBoltAbilitySystem>());
             Add(systemFactory.Create<OrbitalAbilitySystem>());
             Add(systemFactory.Create<RotAuraAbilitySystem>());

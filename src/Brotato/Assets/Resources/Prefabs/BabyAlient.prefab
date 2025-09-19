@@ -124,7 +124,7 @@ MonoBehaviour:
   FreezeColor: {r: 0.21960784, g: 0.6392157, b: 0.74509805, a: 1}
   FreezeOutlineSize: 0.54
   FreezeOutlineSmoothness: 2
-  PoisonColor: {r: 0.21960784, g: 0.6392157, b: 0.74509805, a: 1}
+  PoisonColor: {r: 0.26964164, g: 0.8773585, b: 0.11173906, a: 1}
   PoisonColorIntensity: 0.412
 --- !u!1 &4752413289159063764
 GameObject:
