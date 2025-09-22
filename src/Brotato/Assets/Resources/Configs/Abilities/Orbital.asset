@@ -24,7 +24,7 @@ MonoBehaviour:
       Value: 1
     StatusSetups: []
     ProjectileSetup:
-      ProjectileCount: 3
+      ProjectileCount: 2
       Speed: 2
       Pierce: 0
       ContactRadius: 0.1

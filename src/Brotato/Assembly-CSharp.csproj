@@ -313,6 +313,7 @@
      <Compile Include="Assets\Code\Gameplay\Features\Loot\Factory\LootFactory.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameTransformComponent.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameHeroComponent.cs" />
+     <Compile Include="Assets\Code\Gameplay\Common\Constants\AnimationConstants.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\CleanupUnappliedStatusLinkedChanges.cs" />
@@ -383,7 +384,6 @@
      <Compile Include="Assets\Code\Generated\Input\InputMatcher.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GamePullalbeComponent.cs" />
-     <Compile Include="Assets\Code\Gameplay\Common\Constants\CelebrateAnimations.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\UpdateTransformPositionSystem.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
@@ -457,6 +457,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\Code\Gameplay\Features\Loot\Configs" />
      <Folder Include="Assets\Code\Gameplay\Levels" />
+     <None Include="Assets\Resources\Prefabs\ColorizeWithOverlayAndSoftOutline.shader" />
      <Folder Include="Assets\TCPeasy" />
      <Folder Include="Assets\Code\Gameplay\Common\Physics" />
      <Folder Include="Assets\Code\Generated\Meta" />

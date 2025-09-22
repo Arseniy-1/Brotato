@@ -1,4 +1,5 @@
 using Code.Gameplay.Common;
+using Code.Gameplay.Common.Constants;
 using DG.Tweening;
 using UnityEngine;
 
@@ -8,11 +9,11 @@ namespace Code.Gameplay.Features.Enemy.Behaviours
     {
         private static readonly int OverlayIntensityProperty = Shader.PropertyToID("_OverlayIntensity");
 
-        private readonly int _movingHash = Animator.StringToHash("Run");
-        private readonly int _idleHash = Animator.StringToHash("Idle");
-        private readonly int _attackHash = Animator.StringToHash("attack");
-        private readonly int _diedHash = Animator.StringToHash("Died");
-        private readonly int _damageTakenHash = Animator.StringToHash("DamageTaken");
+        private readonly int _movingHash = Animator.StringToHash(AnimationConstants.Run.ToString());
+        private readonly int _idleHash = Animator.StringToHash(AnimationConstants.Idle.ToString());
+        private readonly int _attackHash = Animator.StringToHash(AnimationConstants.Attack.ToString());
+        private readonly int _damageTakenHash = Animator.StringToHash(AnimationConstants.DamageTaken.ToString());
+        private readonly int _diedHash = Animator.StringToHash(AnimationConstants.Died.ToString());
 
         public Animator Animator;
         public SpriteRenderer SpriteRenderer;
@@ -30,18 +31,14 @@ namespace Code.Gameplay.Features.Enemy.Behaviours
 
         public void PlayDamageTaken()
         {
-            if (DOTween.IsTweening(this))
+            if (DOTween.IsTweening(Material))
                 return;
-
-            if (SpriteRenderer == null)
-                return;
-
-            // Простое и надежное решение - мигание цветом
-            SpriteRenderer.DOColor(new Color(1f, 0.3f, 0.3f), 0.1f) // Красноватый оттенок
+      
+            Material.DOFloat(0.4f, OverlayIntensityProperty, 0.15f)
                 .OnComplete(() =>
                 {
-                    if (SpriteRenderer != null)
-                        SpriteRenderer.DOColor(Color.white, 0.15f);
+                    if (SpriteRenderer)
+                        Material.DOFloat(0, OverlayIntensityProperty, 0.15f);
                 });
         }
 

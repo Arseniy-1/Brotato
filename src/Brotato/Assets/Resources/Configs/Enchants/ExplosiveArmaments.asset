@@ -19,4 +19,4 @@ MonoBehaviour:
     Value: 5
   StatusSetups: []
   Radius: 2
-  ViewPrefab: {fileID: 3464514421686043174, guid: 9306066be8e259744bb2998f69ee6bb0, type: 3}
+  ViewPrefab: {fileID: 7992215702479513368, guid: 1723c0f3b1142c74dab6ac9de37d7f54, type: 3}
