@@ -15,7 +15,8 @@ MonoBehaviour:
   AbilityID: 2
   Levels:
   - Icon: {fileID: 21300000, guid: db8745a0f82022846b058b5eeedb892a, type: 3}
-    Description: "\u041A\u0440\u043E\u0432\u0430\u0432\u0430\u044F \u0440\u0443\u043A\u0430"
+    Description: "\u041E\u0440\u0431\u0438\u0442\u0430\u043B\u044B, \u043A\u043E\u0442\u043E\u0440\u044B\u0435
+      \u043D\u0430\u043D\u043E\u0441\u044F\u0442 \u0443\u0440\u043E\u043D"
     Cooldown: 5
     ViewPrefab: {fileID: 2316132222704836817, guid: 7ddee77abb547824d84d70e3b83b275f, type: 3}
     EffectSetups:
@@ -29,6 +30,44 @@ MonoBehaviour:
       ContactRadius: 0.1
       Lifetime: 3
       OrbitRadius: 1
+    AuraSetup:
+      Radius: 0
+      Interval: 0
+  - Icon: {fileID: 21300000, guid: db8745a0f82022846b058b5eeedb892a, type: 3}
+    Description: "\u041E\u0440\u0431\u0438\u0442\u0430\u043B\u043E\u0432 \u0431\u043E\u043B\u044C\u0448\u0435
+      \u0438 \u043E\u043D\u0438 \u0441\u0438\u043B\u044C\u043D\u0435\u0435"
+    Cooldown: 5
+    ViewPrefab: {fileID: 2316132222704836817, guid: 7ddee77abb547824d84d70e3b83b275f, type: 3}
+    EffectSetups:
+    - EffectTypeId: 1
+      Value: 1
+    StatusSetups: []
+    ProjectileSetup:
+      ProjectileCount: 3
+      Speed: 4
+      Pierce: 0
+      ContactRadius: 0.1
+      Lifetime: 3
+      OrbitRadius: 1.5
+    AuraSetup:
+      Radius: 0
+      Interval: 0
+  - Icon: {fileID: 21300000, guid: db8745a0f82022846b058b5eeedb892a, type: 3}
+    Description: "\u0415\u0449\u0435 \u0431\u043E\u043B\u044C\u0448\u0435 \u0441\u0438\u043B\u044C\u043D\u044B\u0445
+      \u043E\u0440\u0431\u0438\u0442\u0430\u043B\u043E\u0432"
+    Cooldown: 5
+    ViewPrefab: {fileID: 2316132222704836817, guid: 7ddee77abb547824d84d70e3b83b275f, type: 3}
+    EffectSetups:
+    - EffectTypeId: 1
+      Value: 1
+    StatusSetups: []
+    ProjectileSetup:
+      ProjectileCount: 5
+      Speed: 4.5
+      Pierce: 0
+      ContactRadius: 0.1
+      Lifetime: 4
+      OrbitRadius: 2
     AuraSetup:
       Radius: 0
       Interval: 0

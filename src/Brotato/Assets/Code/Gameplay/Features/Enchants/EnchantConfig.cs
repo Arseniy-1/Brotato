@@ -9,7 +9,7 @@ namespace Code.Gameplay.Features.Enchants
     [CreateAssetMenu(fileName = "EnchantConfig", menuName = "Configs/EnchantConfig")]
     public class EnchantConfig : ScriptableObject
     {
-        public EnchantTypeId TypeId;
+        public EnchantTypeId EnchantId;
         public Sprite Icon;
         public List<EffectSetup> EffectSetups;
         public List<StatusSetup> StatusSetups;

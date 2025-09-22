@@ -15,61 +15,60 @@ MonoBehaviour:
   AbilityID: 1
   Levels:
   - Icon: {fileID: 21300000, guid: f43964d6e634d2940981cae154bb2934, type: 3}
-    Description: "\u041F\u0440\u043E\u0431\u0438\u0432\u043A\u0430"
+    Description: "\u041F\u0440\u043E\u0431\u0438\u0432\u0430\u044E\u0449\u0438\u0439
+      \u0441\u043D\u0430\u0440\u044F\u0434"
+    Cooldown: 1
+    ViewPrefab: {fileID: 1965738476501907382, guid: a6da94f5d40bf164faf67f3d726e22e2, type: 3}
+    EffectSetups:
+    - EffectTypeId: 1
+      Value: 1
+    StatusSetups: []
+    ProjectileSetup:
+      ProjectileCount: 0
+      Speed: 4
+      Pierce: 3
+      ContactRadius: 0.1
+      Lifetime: 3
+      OrbitRadius: 0
+    AuraSetup:
+      Radius: 0
+      Interval: 0
+  - Icon: {fileID: 21300000, guid: f43964d6e634d2940981cae154bb2934, type: 3}
+    Description: "\u0423\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435 \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u0438
+      \u0438 \u043F\u0440\u043E\u0431\u0438\u0432\u043D\u043E\u0439 \u0441\u043F\u043E\u0441\u043E\u0431\u043D\u043E\u0441\u0442\u0438"
+    Cooldown: 1
+    ViewPrefab: {fileID: 1965738476501907382, guid: a6da94f5d40bf164faf67f3d726e22e2, type: 3}
+    EffectSetups:
+    - EffectTypeId: 1
+      Value: 1
+    StatusSetups: []
+    ProjectileSetup:
+      ProjectileCount: 0
+      Speed: 5
+      Pierce: 4
+      ContactRadius: 0.1
+      Lifetime: 3
+      OrbitRadius: 0
+    AuraSetup:
+      Radius: 0
+      Interval: 0
+  - Icon: {fileID: 21300000, guid: f43964d6e634d2940981cae154bb2934, type: 3}
+    Description: "\u0421\u043D\u0430\u0440\u044F\u0434\u044B \u0441\u0438\u043B\u044C\u043D\u0435\u0435
+      \u0438 \u0442\u0435\u043F\u0435\u0440\u044C \u044F\u0434\u043E\u0432\u0438\u0442\u044B\u0435"
     Cooldown: 1
     ViewPrefab: {fileID: 1965738476501907382, guid: a6da94f5d40bf164faf67f3d726e22e2, type: 3}
     EffectSetups:
     - EffectTypeId: 1
       Value: 1
     StatusSetups:
-    - StatusTypeId: 2
-      Value: -2
-      Duration: 0.4
-      Period: 0
     - StatusTypeId: 1
-      Value: 0.35
-      Duration: 2
-      Period: 0.4
-    - StatusTypeId: 1
-      Value: 0.35
-      Duration: 2
-      Period: 0.4
-    - StatusTypeId: 1
-      Value: 0.35
-      Duration: 2
-      Period: 0.4
-    - StatusTypeId: 1
-      Value: 0.35
-      Duration: 2
-      Period: 0.4
-    - StatusTypeId: 1
-      Value: 0.35
-      Duration: 2
-      Period: 0.4
-    - StatusTypeId: 1
-      Value: 0.35
-      Duration: 2
-      Period: 0.4
-    - StatusTypeId: 1
-      Value: 0.35
-      Duration: 2
-      Period: 0.4
-    - StatusTypeId: 1
-      Value: 0.35
-      Duration: 2
-      Period: 0.4
-    - StatusTypeId: 1
-      Value: 0.35
-      Duration: 2
-      Period: 0.4
-    - StatusTypeId: 1
-      Value: 0.35
-      Duration: 2
-      Period: 0.4
+      Value: 1
+      Duration: 3
+      Period: 1
     ProjectileSetup:
       ProjectileCount: 0
-      Speed: 5
-      Pierce: 3
+      Speed: 6
+      Pierce: 5
       ContactRadius: 0.1
       Lifetime: 3
       OrbitRadius: 0

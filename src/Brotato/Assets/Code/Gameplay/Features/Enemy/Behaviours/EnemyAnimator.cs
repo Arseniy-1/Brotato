@@ -30,15 +30,29 @@ namespace Code.Gameplay.Features.Enemy.Behaviours
 
         public void PlayDamageTaken()
         {
-            if (DOTween.IsTweening(Material))
+            if (DOTween.IsTweening(this))
                 return;
-      
-            Material.DOFloat(0.5f, OverlayIntensityProperty, 0.15f)
+
+            if (SpriteRenderer == null)
+                return;
+
+            // Простое и надежное решение - мигание цветом
+            SpriteRenderer.DOColor(new Color(1f, 0.3f, 0.3f), 0.1f) // Красноватый оттенок
                 .OnComplete(() =>
                 {
-                    if (SpriteRenderer)
-                        Material.DOFloat(0, OverlayIntensityProperty, 0.15f);
+                    if (SpriteRenderer != null)
+                        SpriteRenderer.DOColor(Color.white, 0.15f);
                 });
+        }
+
+        private string GetMaterialProperties()
+        {
+            var properties = new System.Text.StringBuilder();
+            for (int i = 0; i < Material.shader.GetPropertyCount(); i++)
+            {
+                properties.AppendLine($"{Material.shader.GetPropertyName(i)} ({Material.shader.GetPropertyType(i)})");
+            }
+            return properties.ToString();
         }
 
         public void ResetAll()

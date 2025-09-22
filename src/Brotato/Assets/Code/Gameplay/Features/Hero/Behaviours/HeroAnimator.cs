@@ -23,7 +23,8 @@ namespace Code.Gameplay.Features.Hero.Behaviours
 
         public void PlayAttack() => Animator.SetTrigger(_attackHash);
 
-        public void PlayDied() => Animator.SetTrigger(_diedHash);
+        public void PlayDied() => 
+            Animator.Play(_idleHash);
 
         public void PlayDamageTaken()
         {

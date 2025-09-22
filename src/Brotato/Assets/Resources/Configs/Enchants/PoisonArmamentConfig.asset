@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b969ac2bb541d9862a690f89afd668, type: 3}
   m_Name: PoisonArmamentConfig
   m_EditorClassIdentifier: 
-  TypeId: 1
+  EnchantId: 1
   Icon: {fileID: 21300000, guid: ef162e8d62836d644a131fa18c709713, type: 3}
   EffectSetups: []
   StatusSetups:

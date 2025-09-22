@@ -1,7 +1,6 @@
 using Code.Gameplay.Features.Abilities;
 using Code.Gameplay.Features.Abilities.Upgrade;
 using Code.Gameplay.Features.Hero.Factory;
-using Code.Gameplay.Features.Statuses.Systems;
 using Code.Gameplay.Levels;
 using Entitas;
 
@@ -16,7 +15,6 @@ namespace Code.Gameplay.Features.Hero.Systems
         public InitializeHeroSystem(
             IHeroFactory heroFactory, 
             ILevelDataProvider levelDataProvider, 
-            IStatusApplier statusApplier,
             IAbilityUpgradeService abilityUpgradeService)
         {
             _heroFactory = heroFactory;

@@ -24,7 +24,8 @@ namespace Code.Gameplay.Features.Abilities.Systems
         public OrbitalAbilitySystem(
             GameContext gameContext,
             IStaticDataService staticDataService,
-            IArmamentsFactory armamentsFactory, IAbilityUpgradeService abilityUpgradeService)
+            IArmamentsFactory armamentsFactory, 
+            IAbilityUpgradeService abilityUpgradeService)
         {
             _staticDataService = staticDataService;
             _armamentsFactory = armamentsFactory;

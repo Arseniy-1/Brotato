@@ -1,4 +1,4 @@
-namespace Code.Gameplay.Common
+namespace Code.Gameplay.Common.Constants
 {
     public class GameplayConstants
     {

@@ -368,6 +368,9 @@
      <Reference Include="Entitas.Migration">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Editor\Entitas.Migration.dll</HintPath>
      </Reference>
+     <Reference Include="DOTweenEditor">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+     </Reference>
      <Reference Include="Entitas.Unity">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Entitas.Unity.dll</HintPath>
      </Reference>
@@ -394,6 +397,9 @@
      </Reference>
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="DesperateDevs.Caching">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\DesperateDevs\DesperateDevs.Caching.dll</HintPath>
@@ -439,12 +445,6 @@
      </Reference>
      <Reference Include="Entitas">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Entitas.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTweenEditor">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>

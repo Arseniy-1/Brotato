@@ -17,13 +17,16 @@ namespace Code.Gameplay.Features.Abilities.Systems
 
         public RotAuraAbilitySystem(
             GameContext gameContext,
-            IArmamentsFactory armamentsFactory, IAbilityUpgradeService abilityUpgradeService)
+            IArmamentsFactory armamentsFactory, 
+            IAbilityUpgradeService abilityUpgradeService)
         {
             _armamentsFactory = armamentsFactory;
             _abilityUpgradeService = abilityUpgradeService;
+            
             _abilities = gameContext.GetGroup(GameMatcher
                 .AllOf(GameMatcher.RotAuraAbility)
                 .NoneOf(GameMatcher.Active));
+            
             _heroes = gameContext.GetGroup(GameMatcher
                 .AllOf(
                     GameMatcher.Id,

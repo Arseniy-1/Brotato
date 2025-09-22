@@ -107,7 +107,7 @@ namespace Code.Gameplay.Features.Armaments.Factory
                 .AddWorldPosition(at)
                 .AddProducerId(producerId)
                 .With(x => x.isReadyToCollectTargets = true)
-                .AddSelfDestructTimer(1);
+                .AddSelfDestructTimer(0.2f);
         }
     }
 }

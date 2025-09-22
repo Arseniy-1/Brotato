@@ -12,6 +12,7 @@ namespace Code.Gameplay.Features.EffectApplication.Systems
         public ApplyEffectsOnTargetsSystem(GameContext gameContext, IEffectsFactory effectsFactory)
         {
             _effectsFactory = effectsFactory;
+            
             _entities = gameContext.GetGroup(GameMatcher
                 .AllOf(
                     GameMatcher.EffectSetups,

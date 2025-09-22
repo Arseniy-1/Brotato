@@ -79,7 +79,7 @@ namespace Code.Gameplay.StaticData
         {
             _enchantById = Resources
                 .LoadAll<EnchantConfig>("Configs/Enchants")
-                .ToDictionary(x => x.TypeId, x => x);
+                .ToDictionary(x => x.EnchantId, x => x);
         }
 
         private void LoadLoot()

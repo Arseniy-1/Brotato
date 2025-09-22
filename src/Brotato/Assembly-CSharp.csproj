@@ -103,7 +103,6 @@
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\Indexing\StatusKeyEqualityComparer.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
      <Compile Include="Assets\Code\Common\Systems\CleanupGameDestructedSystem.cs" />
-     <Compile Include="Assets\Code\Gameplay\Common\GameplayConstants.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Enchants\UIFactories\IEnchantUIFactory.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\StatusVisuals\StatusVisuals.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameEnemyComponent.cs" />
@@ -302,6 +301,7 @@
      <Compile Include="Assets\Code\Generated\Game\Components\GameExplosiveEnchantComponent.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\StatusVisuals\UnapplyPoisonVisualSystem.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Effects\EffectTypeId.cs" />
+     <Compile Include="Assets\Code\Gameplay\Common\Constants\GameplayConstants.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Effects\EffectFeature.cs" />
      <Compile Include="Assets\Code\Gameplay\Common\EnchantVisuals\IEnchantVisuals.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GameStatModifiersComponent.cs" />
@@ -383,6 +383,7 @@
      <Compile Include="Assets\Code\Generated\Input\InputMatcher.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\Code\Generated\Game\Components\GamePullalbeComponent.cs" />
+     <Compile Include="Assets\Code\Gameplay\Common\Constants\CelebrateAnimations.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\UpdateTransformPositionSystem.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
@@ -537,6 +538,7 @@
      <Folder Include="Assets\Code\Gameplay\Features\CharacterStats\Systems" />
      <Folder Include="Assets\Resources\UI" />
      <Folder Include="Assets\Code\Gameplay\Features\Armaments\Behaviours" />
+     <Folder Include="Assets\Resources\Sprites\Projectiles\flames\Sprites" />
      <Folder Include="Assets\Code\Gameplay\Features\Enchants\Behaviours" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <Folder Include="Assets\Resources\Configs\LevelUp" />
@@ -550,7 +552,9 @@
      <Folder Include="Assets\TextMesh Pro\Fonts" />
      <Folder Include="Assets\Code\Gameplay\Features\Hero\Factory" />
      <Folder Include="Assets\Code\Gameplay\Features\Effects\Systems" />
+     <Folder Include="Assets\Resources\Sprites\Projectiles\flames" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <Folder Include="Assets\Code\Gameplay\Common\Constants" />
      <Folder Include="Assets\Code\Common\Entity" />
      <Folder Include="Assets\Code\Gameplay\Features\Loot\Factory" />
      <Folder Include="Assets\Resources\Prefabs" />
@@ -890,6 +894,9 @@
      <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Plugins\Zenject\OptionalExtras\ReflectionBaking\Lib\Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
      </Reference>
+     <Reference Include="DOTween">
+     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     </Reference>
      <Reference Include="DesperateDevs.Caching">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\DesperateDevs\DesperateDevs.Caching.dll</HintPath>
      </Reference>
@@ -919,9 +926,6 @@
      </Reference>
      <Reference Include="Entitas">
      <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Entitas\Entitas\Entitas.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween">
-     <HintPath>E:\WorkProgramm\Unity\UnityProjects\Brotato\src\Brotato\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.iOS.Extensions.Xcode">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

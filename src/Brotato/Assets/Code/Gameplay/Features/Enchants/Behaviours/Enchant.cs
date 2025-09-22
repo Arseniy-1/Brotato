@@ -11,7 +11,7 @@ namespace Code.Gameplay.Features.Enchants.Behaviours
         public void Set(EnchantConfig config)
         {
             Icon.sprite = config.Icon;
-            EnchantType = config.TypeId;
+            EnchantType = config.EnchantId;
         }
     }
 }
