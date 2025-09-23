@@ -1,4 +1,6 @@
 using Code.Gameplay.Common;
+using Code.Gameplay.Common.Constants;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Code.Gameplay.Features.Enemy.Behaviours
@@ -7,11 +9,11 @@ namespace Code.Gameplay.Features.Enemy.Behaviours
     {
         private static readonly int OverlayIntensityProperty = Shader.PropertyToID("_OverlayIntensity");
 
-        private readonly int _movingHash = Animator.StringToHash("Run");
-        private readonly int _idleHash = Animator.StringToHash("Idle");
-        private readonly int _attackHash = Animator.StringToHash("attack");
-        private readonly int _diedHash = Animator.StringToHash("Died");
-        private readonly int _damageTakenHash = Animator.StringToHash("DamageTaken");
+        private readonly int _movingHash = Animator.StringToHash(AnimationConstants.Run.ToString());
+        private readonly int _idleHash = Animator.StringToHash(AnimationConstants.Idle.ToString());
+        private readonly int _attackHash = Animator.StringToHash(AnimationConstants.Attack.ToString());
+        private readonly int _damageTakenHash = Animator.StringToHash(AnimationConstants.DamageTaken.ToString());
+        private readonly int _diedHash = Animator.StringToHash(AnimationConstants.Died.ToString());
 
         public Animator Animator;
         public SpriteRenderer SpriteRenderer;
@@ -29,7 +31,25 @@ namespace Code.Gameplay.Features.Enemy.Behaviours
 
         public void PlayDamageTaken()
         {
-            Animator.Play(_damageTakenHash);
+            if (DOTween.IsTweening(Material))
+                return;
+      
+            Material.DOFloat(0.4f, OverlayIntensityProperty, 0.15f)
+                .OnComplete(() =>
+                {
+                    if (SpriteRenderer)
+                        Material.DOFloat(0, OverlayIntensityProperty, 0.15f);
+                });
+        }
+
+        private string GetMaterialProperties()
+        {
+            var properties = new System.Text.StringBuilder();
+            for (int i = 0; i < Material.shader.GetPropertyCount(); i++)
+            {
+                properties.AppendLine($"{Material.shader.GetPropertyName(i)} ({Material.shader.GetPropertyType(i)})");
+            }
+            return properties.ToString();
         }
 
         public void ResetAll()

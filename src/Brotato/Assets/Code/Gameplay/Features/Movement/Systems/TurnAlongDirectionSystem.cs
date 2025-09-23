@@ -13,16 +13,16 @@ namespace Code.Gameplay.Features.Movement.Systems
             _movers = game.GetGroup(GameMatcher
                 .AllOf(
                     GameMatcher.TurnedAlongDirection,
-                    GameMatcher.Direction,
-                    GameMatcher.SpriteRenderer));
+                    GameMatcher.Transform,
+                    GameMatcher.Direction));
         }
 
         public void Execute()
         {
             foreach (GameEntity mover in _movers)
-            {
-                float scale = Mathf.Abs(mover.SpriteRenderer.transform.localScale.x);
-                mover.SpriteRenderer.transform.SetScaleX(scale * FaceDirection(mover));
+            {   
+                float scale = Mathf.Abs(mover.Transform.localScale.x);
+                mover.Transform.SetScaleX(scale * FaceDirection(mover));
             }
         }
 

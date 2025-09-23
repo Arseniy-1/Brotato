@@ -1,4 +1,8 @@
-﻿using Code.Gameplay.Common;
+﻿using System.Threading;
+using Code.Gameplay.Common;
+using Code.Gameplay.Common.Constants;
+using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Code.Gameplay.Features.Hero.Behaviours
@@ -7,33 +11,69 @@ namespace Code.Gameplay.Features.Hero.Behaviours
     {
         private static readonly int OverlayIntensityProperty = Shader.PropertyToID("_OverlayIntensity");
 
-        private readonly int _movingHash = Animator.StringToHash("Run");
-        private readonly int _idleHash = Animator.StringToHash("Idle");
-        private readonly int _attackHash = Animator.StringToHash("attack");
-        private readonly int _damageTakenHash = Animator.StringToHash("DamageTaken");
-        private readonly int _diedHash = Animator.StringToHash("died");
+        private readonly int _movingHash = Animator.StringToHash(AnimationConstants.Run.ToString());
+        private readonly int _idleHash = Animator.StringToHash(AnimationConstants.Idle.ToString());
+        private readonly int _attackHash = Animator.StringToHash(AnimationConstants.Attack.ToString());
+        private readonly int _damageTakenHash = Animator.StringToHash(AnimationConstants.DamageTaken.ToString());
+        private readonly int _diedHash = Animator.StringToHash(AnimationConstants.Died.ToString());
 
-        public Animator Animator;
-        public SpriteRenderer SpriteRenderer;
-        private Material Material => SpriteRenderer.material;
+        [SerializeField] private Animator _animator;
+        [SerializeField] private SpriteRenderer _spriteRenderer;
+        private Material Material => _spriteRenderer.material;
 
-        public void PlayMove() => Animator.Play(_movingHash);
-        public void PlayIdle() => Animator.Play(_idleHash);
+        public void PlayMove() => _animator.Play(_movingHash);
+        public void PlayIdle() => _animator.Play(_idleHash);
 
-        public void PlayAttack() => Animator.SetTrigger(_attackHash);
+        public void PlayAttack() => _animator.SetTrigger(_attackHash);
 
-        public void PlayDied() => Animator.SetTrigger(_diedHash);
+        public void PlayDied() => 
+            _animator.Play(_idleHash);
 
         public void PlayDamageTaken()
         {
-            Debug.Log("123");
-            Animator.Play(_damageTakenHash);
+            if (DOTween.IsTweening(Material))
+                return;
+      
+            Material.DOFloat(0.5f, OverlayIntensityProperty, 0.15f)
+                .OnComplete(() =>
+                {
+                    if (_spriteRenderer)
+                        Material.DOFloat(0, OverlayIntensityProperty, 0.15f);
+                });
         }
 
-        public void ResetAll()
+        private async UniTask PlayAndWait(int animationHash, CancellationToken token)
         {
-            Animator.ResetTrigger(_attackHash);
-            Animator.ResetTrigger(_diedHash);
+            _animator.Play(animationHash);
+            await UniTask.Yield();
+
+            if (token.IsCancellationRequested || _animator == null)
+                return;
+
+            AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
+            int attempts = 0;
+
+            while (token.IsCancellationRequested == false && stateInfo.shortNameHash != animationHash && attempts < 60)
+            {
+                await UniTask.Yield();
+
+                if (token.IsCancellationRequested || _animator == null)
+                    return;
+
+                stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
+                attempts++;
+            }
+
+            while (token.IsCancellationRequested == false && stateInfo.normalizedTime < 1f &&
+                   !_animator.IsInTransition(0))
+            {
+                await UniTask.Yield();
+
+                if (token.IsCancellationRequested || _animator == null)
+                    return;
+
+                stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
+            }
         }
     }
 }

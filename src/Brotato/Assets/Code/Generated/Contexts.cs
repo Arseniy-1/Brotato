@@ -60,21 +60,41 @@ public partial class Contexts : Entitas.IContexts {
 //------------------------------------------------------------------------------
 public partial class Contexts {
 
+    public const string ApplierStatusLink = "ApplierStatusLink";
     public const string Id = "Id";
+    public const string ParentAbility = "ParentAbility";
 
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeEntityIndices() {
+        game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, int>(
+            ApplierStatusLink,
+            game.GetGroup(GameMatcher.ApplierStatusLink),
+            (e, c) => ((Code.Gameplay.Features.Statuses.ApplierStatusLink)c).Value));
+
         game.AddEntityIndex(new Entitas.PrimaryEntityIndex<GameEntity, int>(
             Id,
             game.GetGroup(GameMatcher.Id),
             (e, c) => ((Code.Gameplay.Common.Id)c).Value));
+
+        game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, Code.Gameplay.Features.Abilities.AbilityId>(
+            ParentAbility,
+            game.GetGroup(GameMatcher.ParentAbility),
+            (e, c) => ((Code.Gameplay.Features.Abilities.ParentAbility)c).Value));
     }
 }
 
 public static class ContextsExtensions {
 
+    public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithApplierStatusLink(this GameContext context, int Value) {
+        return ((Entitas.EntityIndex<GameEntity, int>)context.GetEntityIndex(Contexts.ApplierStatusLink)).GetEntities(Value);
+    }
+
     public static GameEntity GetEntityWithId(this GameContext context, int Value) {
         return ((Entitas.PrimaryEntityIndex<GameEntity, int>)context.GetEntityIndex(Contexts.Id)).GetEntity(Value);
+    }
+
+    public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithParentAbility(this GameContext context, Code.Gameplay.Features.Abilities.AbilityId Value) {
+        return ((Entitas.EntityIndex<GameEntity, Code.Gameplay.Features.Abilities.AbilityId>)context.GetEntityIndex(Contexts.ParentAbility)).GetEntities(Value);
     }
 }
 //------------------------------------------------------------------------------
