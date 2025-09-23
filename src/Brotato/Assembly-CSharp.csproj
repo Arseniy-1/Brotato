@@ -434,6 +434,7 @@
      <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\CleanupUnappliedStatusesSystem.cs" />
      <Compile Include="Assets\Code\Infrastructure\View\Registrars\EntityComponentRegistrar.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets\Resources\Sprites\UI\HUD" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <Folder Include="Assets\Code\Common" />
      <Folder Include="Assets\Code\Gameplay\Features\Hero" />
@@ -474,6 +475,7 @@
      <Folder Include="Assets\Code\Gameplay\Common\Time" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
+     <Folder Include="Assets\Resources\Sprites\UI\Abilities" />
      <None Include="Assets\Entitas\Entitas\LICENSE.txt" />
      <Folder Include="Assets\Code\Gameplay\Features\Abilities\Factory" />
      <Folder Include="Assets\Code\Gameplay\Features\Loot\Systems" />
@@ -607,6 +609,7 @@
      <Folder Include="Assets\Resources\Sprites\UI" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <Folder Include="Assets\Code\Gameplay\Features\CharacterStats\Indexing" />
+     <Folder Include="Assets\Resources\Sprites\UI\Global" />
      <Folder Include="Assets\Resources\Configs\Enchants" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
      <Folder Include="Assets\Code\Gameplay\Features\Cooldowns\Systems" />

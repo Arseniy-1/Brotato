@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AbilityID: 1
   Levels:
-  - Icon: {fileID: 21300000, guid: f43964d6e634d2940981cae154bb2934, type: 3}
+  - Icon: {fileID: 21300000, guid: 928b449c492b63e4db9d09e71138e12b, type: 3}
     Description: "\u041F\u0440\u043E\u0431\u0438\u0432\u0430\u044E\u0449\u0438\u0439
       \u0441\u043D\u0430\u0440\u044F\u0434"
     Cooldown: 1
@@ -33,7 +33,7 @@ MonoBehaviour:
     AuraSetup:
       Radius: 0
       Interval: 0
-  - Icon: {fileID: 21300000, guid: f43964d6e634d2940981cae154bb2934, type: 3}
+  - Icon: {fileID: 21300000, guid: 928b449c492b63e4db9d09e71138e12b, type: 3}
     Description: "\u0423\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435 \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u0438
       \u0438 \u043F\u0440\u043E\u0431\u0438\u0432\u043D\u043E\u0439 \u0441\u043F\u043E\u0441\u043E\u0431\u043D\u043E\u0441\u0442\u0438"
     Cooldown: 1
@@ -52,7 +52,7 @@ MonoBehaviour:
     AuraSetup:
       Radius: 0
       Interval: 0
-  - Icon: {fileID: 21300000, guid: f43964d6e634d2940981cae154bb2934, type: 3}
+  - Icon: {fileID: 21300000, guid: 928b449c492b63e4db9d09e71138e12b, type: 3}
     Description: "\u0421\u043D\u0430\u0440\u044F\u0434\u044B \u0441\u0438\u043B\u044C\u043D\u0435\u0435
       \u0438 \u0442\u0435\u043F\u0435\u0440\u044C \u044F\u0434\u043E\u0432\u0438\u0442\u044B\u0435"
     Cooldown: 1
