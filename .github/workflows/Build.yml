@@ -19,7 +19,7 @@ jobs:
           lfs: true
       - uses: actions/cache@v3
         with:
-          path: Library
+          path: src\Brotato\Library
           key: Library-${{ matrix.targetPlatform }}
           restore-keys: Library-
       - if: matrix.targetPlatform == 'Android'
@@ -31,8 +31,8 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
-          projectPath: "src/Brotato"
+          projectPath: "src//Brotato"
       - uses: actions/upload-artifact@v4
         with:
           name: Build-${{ matrix.targetPlatform }}
-          path: build/${{ matrix.targetPlatform }}
+          path: build\${{ matrix.targetPlatform }}
