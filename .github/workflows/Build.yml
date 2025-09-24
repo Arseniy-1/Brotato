@@ -33,6 +33,7 @@ jobs:
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
           projectPath: "src\\Brotato"
+          useHost: true
       - uses: actions/upload-artifact@v4
         with:
           name: Build-${{ matrix.targetPlatform }}
